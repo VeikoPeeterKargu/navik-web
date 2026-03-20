@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1A1A18;
+  --foreground: #F8F5EE;
+  --primary: #C9A027;
+  --primary-foreground: #1A1A18;
+  --secondary: #252520;
+  --secondary-foreground: #F8F5EE;
+  --accent: #C9A027;
+  --accent-foreground: #1A1A18;
+  --muted: #2A2820;
+  --muted-foreground: #8A7E6A;
+  --border: #2A2820;
+  --card: #1E1E1C;
+  --gold: #C9A027;
+  --cream: #F8F5EE;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+.map-grid {
+  background-image:
+    linear-gradient(rgba(201, 160, 39, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 160, 39, 0.07) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+html { scroll-behavior: smooth; }
