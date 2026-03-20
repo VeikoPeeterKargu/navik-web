@@ -46,9 +46,10 @@ export function NavikLogo({ className, height, size, variant = 'light' }: NavikL
   const displayH = resolveHeight(size, height);
 
   const useDark = variant === 'light'; // 'light' variant = tume taust → kasuta heledaid värve
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
   const src = useDark
-    ? '/logod/7-Navik-tagline-tume-taust.png'
-    : '/logod/2-Navik-wordmark.png';
+    ? `${basePath}/logod/7-Navik-tagline-tume-taust.png`
+    : `${basePath}/logod/2-Navik-wordmark.png`;
   const crop = useDark ? DARK_CROP : LIGHT_CROP;
 
   const scale = displayH / crop.h;
