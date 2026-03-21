@@ -20,7 +20,7 @@ const jakarta = Plus_Jakarta_Sans({
 const SITE_URL = "https://kargu.ee/navik";
 
 export const metadata: Metadata = {
-  title: "Navik OÜ | Sõltumatu Digijuht & IT-audit Eestis",
+  title: "Navik OÜ | Piirideta Potentsiaal — Sõltumatu Digijuht & IT-audit",
   description:
     "Aitan VKE-del vältida kalleid IT-vigu. Sõltumatu IT-otsuste audit, osalise ajaga digijuht ja praktiline AI-automatiseerimine. Esimene konsultatsioon tasuta.",
   metadataBase: new URL(SITE_URL),
@@ -28,19 +28,28 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "Navik OÜ | Sõltumatu Digijuht & IT-audit",
+    title: "Navik OÜ | Piirideta Potentsiaal — Sõltumatu Digijuht & IT-audit",
     description:
       "Aitan VKE-del vältida kalleid IT-vigu. Sõltumatu IT-otsuste audit, osalise ajaga digijuht ja AI-automatiseerimine.",
     url: SITE_URL,
     siteName: "Navik OÜ",
     locale: "et_EE",
     type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/og-image.png`,
+        width: 1024,
+        height: 1024,
+        alt: "Navik OÜ — Sõltumatu Digijuht & IT-audit",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Navik OÜ | Sõltumatu Digijuht & IT-audit",
+    title: "Navik OÜ | Piirideta Potentsiaal — Sõltumatu Digijuht & IT-audit",
     description:
       "Aitan VKE-del vältida kalleid IT-vigu. Esimene konsultatsioon tasuta.",
+    images: [`${SITE_URL}/og-image.png`],
   },
   robots: {
     index: true,
@@ -114,13 +123,11 @@ export default function RootLayout({
 
   return (
     <html lang="et">
-      <head>
+      <body className={`${cormorant.variable} ${jakarta.variable} min-h-screen flex flex-col`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className={`${cormorant.variable} ${jakarta.variable} min-h-screen flex flex-col`}>
         <Navbar />
         <div className="flex-1">
           {children}

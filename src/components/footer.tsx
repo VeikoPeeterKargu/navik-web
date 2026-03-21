@@ -5,7 +5,7 @@ const footerLinks = {
     Teenused: [
         { name: 'Vale IT-Otsuse Audit', href: '/audit' },
         { name: 'Osalise ajaga Digijuht', href: '/digijuht' },
-        { name: 'Praktiline AI', href: '/audit' },
+        { name: 'Praktiline AI', href: '/ai' },
     ],
     Ettevõte: [
         { name: 'Meist', href: '/meist' },
