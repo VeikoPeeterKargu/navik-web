@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NAVIK OÜ — Veebileht
 
-## Getting Started
+Sõltumatu IT-konsultatsiooni ettevõtte veebileht.  
+🌐 **Live:** [kargu.ee/navik](https://kargu.ee/navik) | [navik.ee](https://navik.ee)
 
-First, run the development server:
+---
+
+## Ülevaade
+
+NAVIK OÜ pakub Eesti VKE-dele sõltumatut IT-otsuste auditit, osalise koormusega digijuhtimist ja praktilist AI-automatiseerimist. See repo sisaldab ettevõtte veebiportaali lähtekoodi.
+
+## Tech Stack
+
+| Komponent | Tehnoloogia |
+|-----------|-------------|
+| Framework | Next.js 16 (App Router, static export) |
+| Keel | TypeScript 5 |
+| Styling | TailwindCSS 4 |
+| Animatsioonid | Framer Motion |
+| Hosting | Zone.ee (staatiline) |
+| Analytics | GA4 (G-1CQ79NTTPS) |
+
+## Lehed
+
+| Route | Kirjeldus |
+|-------|-----------|
+| `/` | Avaleht — hero section teenuste tutvustusega |
+| `/audit` | IT-otsuse Audit teenuse leht |
+| `/digijuht` | Fractional CIO / osalise ajaga digijuht |
+| `/ai` | Praktiline AI & Automatiseerimine |
+| `/kontakt` | Kontaktivorm |
+
+## Arendamine
 
 ```bash
+# Installeeri sõltuvused
+npm install
+
+# Käivita dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Ava: http://localhost:3000/navik
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Loo staatiline build
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Output: ./out/ kaust → lae Zone.ee-sse
+```
 
-## Learn More
+> **NB:** Projekt kasutab `output: 'export'` ja `basePath: '/navik'`. Kõik geneeritud failid peavad minema kargu.ee serveri `/navik/` alamkausta.
 
-To learn more about Next.js, take a look at the following resources:
+## SEO & AI Discovery
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `public/sitemap.xml` — otsingumootorite kaart
+- `public/llms.txt` — AI-agentide discovery fail
+- JSON-LD structured data (ProfessionalService schema) — `layout.tsx`
+- OpenGraph + Twitter Card meta tagid
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Kontakt
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Asutaja:** Veiko-Peeter Kargu
+- **E-post:** peeter@kargu.ee
+- **Registrikood:** 17454389

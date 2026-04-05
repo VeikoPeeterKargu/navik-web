@@ -70,9 +70,9 @@ const redFlags = [
     },
     {
         number: '🚩 09',
-        quote: '"Tulemuspõhine hinnastamine"',
-        meaning: 'Tähendab: keegi ei tea, mis see "tulemus" on. Hinnastamine pole tulemuspõhine, vaid lihtsalt ebamäärane. Ja kui tulemust pole — keegi pole süüdi.',
-        action: 'Nõua mõõdetavad KPI-d enne allkirja: mis number peab paranema, kui palju, mis aja jooksul. Kui vendor ei suuda nimetada — ära allkirjasta.',
+        quote: '"Tulemuspõhine hinnastamine garanteerib teile riskivaba projekti"',
+        meaning: 'Hea tulemuspõhine leping tähendab, et IT-partner jagab sinuga äririski — ta teenib rohkem ainult siis, kui sinu äri võidab. Halb tulemuspõhine leping tähendab, et "tulemused" on defineeritud nii ebamääraselt, et vendor saab alati väita edu. Või veel hullem — lepingusse on peidetud trahvid tellijale, kui tema meeskond ei täida vendori poolt seatud "koostöö-KPI-sid".',
+        action: 'Nõua enne allkirja: (1) Konkreetsed KPI-d numbrites — mis mõõdik, mis baastase, mis sihtarv, mis tähtaeg. (2) Kes mõõdab — sõltumatu kolmas osapool, mitte vendor ise. (3) Mis juhtub, kui tulemust pole — kas vendor kannab kulu või sina? Kui vastus on "jah, aga..." — ära allkirjasta.',
         severity: 'Kriitiline',
     },
     {
