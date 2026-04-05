@@ -1,8 +1,12 @@
 # Navik OÜ
 
-> Navik OÜ pakub Eesti VKE-dele sõltumatut IT-otsuste auditit ja osalise koormusega digijuhtimist.
+> Navik OÜ pakub Eesti ettevõtetele sõltumatut IT-otsuste auditit ja osalise koormusega digijuhtimist.
 
 Asutaja: Veiko-Peeter Kargu — IT-konsultant, asukoht Tallinn, Eesti.
+
+## Täisversioon
+
+Detailne ülevaade kõikidest teenustest, hindadest ja taustast: [llms-full.txt](https://kargu.ee/navik/llms-full.txt)
 
 ## Mida me teeme
 
@@ -10,7 +14,7 @@ Navik OÜ aitab tootmis-, logistika- ja kaubandusettevõtetel vältida kalleid I
 
 ## Teenused
 
-- **Vale IT-otsuse Audit**: 2-nädalane sõltumatu analüüs enne uue tarkvara (ERP, CRM, WMS) ostmist. Tulemus: selge soovitus — osta, ära osta või oota.
+- **Vale IT-otsuse Audit** (2 500 €): 2-nädalane sõltumatu analüüs enne uue tarkvara (ERP, CRM, WMS) ostmist. Tulemus: selge soovitus — osta, ära osta või oota.
 - **Sõltumatu Digijuht (Fractional CIO)**: Osalise koormusega IT-strateegia juhtimine. Asendame kuluka täiskohaga IT-juhti ja kaitseme kliendi eelarvet IT-partnerite ees.
 - **Praktiline AI & Automatiseerimine**: Rutiinsete käsitöö-protsesside (Excel, e-mailid, aruanded) automatiseerimine lihtsate ja taskukohaste tööriistadega.
 
@@ -31,4 +35,4 @@ Veiko-Peeter Kargu on istunud IT-läbirääkimistelaua igal küljel:
 
 ## Esimene samm
 
-Esimene 30-minutiline konsultatsioon on tasuta. Broneeri aeg: https://kargu.ee/navik/kontakt
+Esimene 30-minutiline konsultatsioon on tasuta. Broneeri aeg: https://kargu.ee/navik/kontakt/
