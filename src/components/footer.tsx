@@ -96,16 +96,20 @@ export function Footer() {
                         © {new Date().getFullYear()} Navik OÜ. Kõik õigused kaitstud.
                     </p>
                     <div className="flex gap-6">
-                        {['Privaatsuspoliitika', 'Kasutustingimused'].map((t) => (
-                            <Link
-                                key={t}
-                                href="#"
-                                className="text-xs text-[#5A5248] hover:text-[#C9A027] transition-colors"
-                                style={{ fontFamily: 'var(--font-body)' }}
-                            >
-                                {t}
-                            </Link>
-                        ))}
+                        <Link
+                            href="/privaatsuspoliitika"
+                            className="text-xs text-[#5A5248] hover:text-[#C9A027] transition-colors"
+                            style={{ fontFamily: 'var(--font-body)' }}
+                        >
+                            Privaatsuspoliitika
+                        </Link>
+                        <Link
+                            href="#"
+                            className="text-xs text-[#5A5248] hover:text-[#C9A027] transition-colors"
+                            style={{ fontFamily: 'var(--font-body)' }}
+                        >
+                            Kasutustingimused
+                        </Link>
                     </div>
                 </div>
             </div>

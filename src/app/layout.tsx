@@ -4,6 +4,7 @@ import GoogleAnalytics from "@/components/analytics";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { CookieBanner } from "@/components/cookie-banner";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-display",
@@ -136,6 +137,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
