@@ -22,7 +22,7 @@ export default function PrivaatsuspoliitikaPage() {
           style={{ fontFamily: 'var(--font-body)' }}
         >
           <p>
-            NAVIK OÜ (edaspidi "meie" või "ettevõte") hindab teie privaatsust kõrgelt ning 
+            NAVIK OÜ (edaspidi &quot;meie&quot; või &quot;ettevõte&quot;) hindab teie privaatsust kõrgelt ning 
             rakendab asjakohaseid meetmeid teie isikuandmete kaitsmiseks vastavalt 
             isikuandmete kaitse üldmäärusele (GDPR) ja teistele asjakohastele õigusaktidele.
           </p>
@@ -69,7 +69,7 @@ export default function PrivaatsuspoliitikaPage() {
             <ul className="list-disc pl-5 space-y-2">
               <li>Taotleda juurdepääsu meie poolt kogutud teie isikuandmetele;</li>
               <li>Nõuda andmete parandamist, kui need on ebatäpsed;</li>
-              <li>Nõuda isikuandmete kustutamist ("õigus olla unustatud");</li>
+              <li>Nõuda isikuandmete kustutamist (&quot;õigus olla unustatud&quot;);</li>
               <li>Võtta tagasi varasemalt antud nõusolek isikuandmete töötlemiseks.</li>
             </ul>
           </section>
