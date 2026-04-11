@@ -104,7 +104,7 @@ export function Footer() {
                             Privaatsuspoliitika
                         </Link>
                         <Link
-                            href="#"
+                            href="/kasutustingimused"
                             className="text-xs text-[#5A5248] hover:text-[#C9A027] transition-colors"
                             style={{ fontFamily: 'var(--font-body)' }}
                         >
