@@ -5,6 +5,18 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/veeb',
+        destination: 'https://www.kargu.ee/veeb/',
+      },
+      {
+        source: '/veeb/:path+',
+        destination: 'https://www.kargu.ee/veeb/:path+',
+      },
+    ];
+  },
   async headers() {
     return [
       {
