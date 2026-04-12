@@ -20,6 +20,7 @@ const LEFT_NAV = [
   { name: 'Praktiline AI', href: '/ai' },
 ];
 const RIGHT_NAV = [
+  { name: 'Veeb', href: '/veeb' },
   { name: 'Kogemus', href: '/#kogemus' },
   { name: 'Kontakt', href: '/#footer-contact' },
 ];
