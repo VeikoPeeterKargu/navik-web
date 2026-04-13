@@ -15,7 +15,7 @@ function KontaktForm() {
         >
             {/* FormSubmit settings */}
             <input type="hidden" name="_subject" value={`Navik päring — ${allikas}`} />
-            <input type="hidden" name="_next" value="https://www.kargu.ee/navik/kontakt/?sent=1" />
+            <input type="hidden" name="_next" value="https://navik.ee/kontakt/?sent=1" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="Allikas" value={allikas} />

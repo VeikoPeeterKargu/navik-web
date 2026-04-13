@@ -19,7 +19,7 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600"],
 });
 
-const SITE_URL = "https://kargu.ee/navik";
+const SITE_URL = "https://navik.ee";
 
 export const metadata: Metadata = {
   title: "Navik OÜ | Piirideta Potentsiaal — Sõltumatu Digijuht & IT-audit",
@@ -68,7 +68,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Navik OÜ",
-    url: "https://kargu.ee/navik",
+    url: "https://navik.ee",
     description:
       "Sõltumatu IT-otsuste audit ja osalise ajaga digijuhtimine Eesti VKE-dele. Aitan vältida kalleid IT-vigu ERP, CRM ja WMS lahenduste soetamisel.",
     founder: {
