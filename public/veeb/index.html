@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Analytics Consent Mode ja laadimine -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Vaikimisi keelame jälgimisküpsised
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+    // Kui varasemalt nõustutud, anname loa
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+      });
+    }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CQ79NTTPS"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-1CQ79NTTPS', {
+      'content_group': 'Veebitehas'
+    });
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navik OÜ — Kodulehed AI abil | 100 €</title>
+  <meta name="description" content="Uus koduleht 100 euroga, 1–2 päevaga valmis. AI-põhine arendus, mobiilisõbralik disain, ilma varjatud kuutasudeta. Navik OÜ.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Uus koduleht 100 € — valmis 1–2 päevaga">
+  <meta property="og:description" content="Tehisintellekt teeb musta töö. Sina räägid oma ärist — mina ehitan puhta, kiire ja professionaalse kodulehe.">
+  <meta property="og:image" content="/veeb/assets/kargu.webp">
+  <meta property="og:url" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Uus koduleht 100 € — valmis 1–2 päevaga">
+  <meta name="twitter:description" content="AI-põhine kodulehe loomine. Puhas kood, mobiilisõbralik, sinu oma serveris.">
+  <meta name="twitter:image" content="/veeb/assets/kargu.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
+  <link rel="canonical" href="https://navik.ee/veeb/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAFAF7;
+      --bg-warm: #F4F1EC;
+      --bg-card: #FFFFFF;
+      --text: #1A1A1A;
+      --text-secondary: #555555;
+      --text-muted: #636363;
+      --accent: #3D5AFE;
+      --accent-soft: rgba(61,90,254,0.08);
+      --accent-hover: #304FFE;
+      --border: #E8E5E0;
+      --border-light: #F0EDE8;
+      --radius: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+      --font-display: 'DM Serif Display', Georgia, serif;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: var(--font-body);
+      font-size: 17px;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- Animations --- */
+    .reveal { opacity:0; transform:translateY(28px); transition: opacity 0.8s cubic-bezier(.22,1,.36,1), transform 0.8s cubic-bezier(.22,1,.36,1); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* --- Layout --- */
+    .container { max-width:1080px; margin:0 auto; padding:0 32px; }
+    @media(max-width:640px) { .container { padding:0 20px; } }
+
+    /* --- Navigation --- */
+    .nav-bar {
+      position:sticky; top:0; z-index:100;
+      background: rgba(250,250,247,0.92);
+      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+      height: 80px;
+    }
+    .nav-inner {
+      max-width:1080px; margin:0 auto; padding:0 32px;
+      display:flex; justify-content:space-between; align-items:center; height:100%;
+    }
+    .nav-logo { display:flex; align-items:center; }
+    .nav-logo-img { height:44px; width:auto; display:block; }
+    .nav-right { display:flex; align-items:center; gap:28px; }
+    .nav-links { display:flex; gap:24px; list-style:none; }
+    .nav-links a {
+      font-size:15px; font-weight:500; color:var(--text-secondary);
+      text-decoration:none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color:var(--text); }
+    .lang-group { display:flex; gap:4px; }
+    .lang-btn {
+      font-family:var(--font-body); font-size:12px; font-weight:600;
+      padding:5px 12px; border-radius:8px;
+      border:1.5px solid var(--border); background:transparent;
+      color:var(--text-secondary); cursor:pointer; transition:all 0.2s;
+    }
+    .lang-btn.active { background:var(--text); color:#fff; border-color:var(--text); }
+    .lang-btn:hover:not(.active) { border-color:var(--text-secondary); color:var(--text-secondary); }
+    @media(max-width:640px) {
+      .nav-links { display:none; }
+      .nav-inner { padding:0 20px; }
+      .nav-bar { height:60px; }
+    }
+
+    /* --- Hero --- */
+    .hero {
+      padding: 100px 0 80px;
+      text-align:center;
+    }
+    .hero-tag {
+      display:inline-block;
+      font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase;
+      color:#1D35A3; background:var(--accent-soft);
+      padding:8px 20px; border-radius:100px;
+      margin-bottom:32px;
+    }
+    .hero h1 {
+      font-family:var(--font-display);
+      font-size:clamp(36px, 5.5vw, 56px);
+      font-weight:400; line-height:1.15;
+      color:var(--text); margin-bottom:24px;
+      max-width:720px; margin-left:auto; margin-right:auto;
+    }
+    .hero h1 em {
+      font-style:italic; color:var(--accent);
+    }
+    .hero-sub {
+      font-size:19px; color:var(--text-secondary);
+      max-width:540px; margin:0 auto 40px;
+      line-height:1.7; font-weight:400;
+    }
+    .price-badge {
+      display:inline-flex; align-items:center; gap:12px;
+      background:var(--text); color:#fff;
+      padding:16px 32px; border-radius:14px;
+      box-shadow: var(--shadow-md);
+      text-decoration:none;
+      transition:transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s;
+    }
+    .price-badge:hover {
+      transform:translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    .price-num {
+      font-family:var(--font-display); font-size:2.4rem; font-weight:400;
+    }
+    .price-label { font-size:15px; opacity:0.8; }
+    .speed-note {
+      margin-top:20px; font-size:14px; color:var(--text-muted);
+      letter-spacing:0.02em;
+    }
+    @media(max-width:640px) {
+      .hero { padding:64px 0 56px; }
+      .hero-sub { font-size:17px; }
+    }
+
+    /* --- Section --- */
+    .section { padding:80px 0; }
+    .section + .section { border-top:1px solid var(--border); }
+    .section-label {
+      font-size:13px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
+      color:var(--accent); margin-bottom:12px;
+    }
+    .section-title {
+      font-family:var(--font-display); font-size:clamp(28px,4vw,40px);
+      font-weight:400; line-height:1.2;
+      color:var(--text); margin-bottom:48px;
+    }
+    @media(max-width:640px) {
+      .section { padding:56px 0; }
+      .section-title { margin-bottom:32px; }
+    }
+
+    /* --- Features --- */
+    .features-grid {
+      display:grid; grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+    .feature-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); padding:32px;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .feature-card:hover {
+      box-shadow:var(--shadow-md); transform:translateY(-3px);
+    }
+    .feature-icon {
+      width:48px; height:48px; border-radius:12px;
+      background:var(--accent-soft); color:var(--accent);
+      display:flex; align-items:center; justify-content:center;
+      font-size:22px; margin-bottom:20px;
+    }
+    .feature-title {
+      font-size:18px; font-weight:600; margin-bottom:8px; color:var(--text);
+    }
+    .feature-desc {
+      font-size:15px; color:var(--text-secondary); line-height:1.65;
+    }
+    @media(max-width:640px) {
+      .features-grid { grid-template-columns:1fr; }
+      .feature-card { padding:24px; }
+    }
+
+    /* --- Pricing --- */
+    .pricing-table {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); overflow:hidden;
+      box-shadow:var(--shadow-sm);
+    }
+    .pricing-row {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:24px 32px;
+      border-bottom:1px solid var(--border-light);
+    }
+    .pricing-row:last-child { border-bottom:none; }
+    .pricing-row:hover { background:var(--accent-soft); }
+    .pricing-name { font-size:17px; font-weight:600; color:var(--text); }
+    .pricing-detail { font-size:14px; color:var(--text-muted); margin-top:2px; }
+    .pricing-price {
+      font-family:var(--font-display); font-size:24px;
+      color:var(--accent); white-space:nowrap; margin-left:16px;
+    }
+
+    /* --- Steps --- */
+    .steps-grid {
+      display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
+      counter-reset:steps;
+    }
+    .step {
+      counter-increment:steps;
+      text-align:center; padding:32px 20px;
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius);
+      transition:box-shadow 0.3s, transform 0.3s;
+    }
+    .step:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); }
+    .step::before {
+      content:counter(steps);
+      display:flex; align-items:center; justify-content:center;
+      width:44px; height:44px; border-radius:50%;
+      background:var(--accent); color:#fff;
+      font-family:var(--font-display); font-size:20px;
+      margin:0 auto 16px;
+    }
+    .step-title { font-size:16px; font-weight:600; margin-bottom:6px; color:var(--text); }
+    .step-desc { font-size:14px; color:var(--text-secondary); line-height:1.6; }
+    @media(max-width:768px) {
+      .steps-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media(max-width:480px) {
+      .steps-grid { grid-template-columns:1fr; }
+    }
+
+    /* --- Portfolio --- */
+    .portfolio-grid {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+    }
+    .portfolio-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); overflow:hidden;
+      text-decoration:none; color:inherit; display:block;
+      transition:box-shadow 0.3s, transform 0.3s;
+    }
+    .portfolio-card:hover {
+      box-shadow:var(--shadow-lg); transform:translateY(-4px);
+    }
+    .portfolio-thumb { height:180px; overflow:hidden; }
+    .portfolio-thumb img {
+      width:100%; height:100%; object-fit:cover; object-position:top;
+      transition:transform 0.5s cubic-bezier(.22,1,.36,1);
+    }
+    .portfolio-card:hover .portfolio-thumb img { transform:scale(1.06); }
+    .portfolio-info { padding:16px 20px; }
+    .portfolio-name { font-size:16px; font-weight:600; color:var(--text); }
+    .portfolio-type { font-size:13px; color:var(--text-muted); margin-top:2px; }
+    @media(max-width:768px) { .portfolio-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:480px) { .portfolio-grid { grid-template-columns:1fr; } }
+
+    /* --- About --- */
+    .about-block {
+      display:grid; grid-template-columns:auto 1fr; gap:48px; align-items:start;
+    }
+    .about-meta { min-width:180px; }
+    .about-name {
+      font-family:var(--font-display); font-size:28px;
+      margin-bottom:4px; color:var(--text);
+    }
+    .about-title { font-size:14px; color:var(--text-muted); font-weight:500; }
+    .about-text {
+      font-size:17px; color:var(--text-secondary); line-height:1.8;
+    }
+    @media(max-width:640px) {
+      .about-block { grid-template-columns:1fr; gap:16px; }
+    }
+
+    /* --- FAQ --- */
+    .faq-list {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); overflow:hidden;
+    }
+    .faq-item { padding:28px 32px; border-bottom:1px solid var(--border-light); }
+    .faq-item:last-child { border-bottom:none; }
+    .faq-q { font-size:17px; font-weight:600; margin-bottom:8px; color:var(--text); }
+    .faq-a { font-size:15px; color:var(--text-secondary); line-height:1.7; }
+
+    /* --- Contact --- */
+    .contact-wrapper {
+      display:grid; grid-template-columns:1fr 1fr; gap:32px;
+    }
+    .contact-form { display:flex; flex-direction:column; gap:12px; }
+    .form-input, .form-textarea {
+      font-family:var(--font-body); font-size:16px;
+      padding:16px 20px; border:1.5px solid var(--border);
+      border-radius:12px; background:var(--bg-card);
+      color:var(--text); outline:none; transition:border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color:var(--text-muted); }
+    .form-input:focus, .form-textarea:focus {
+      border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft);
+    }
+    .form-textarea { resize:vertical; min-height:120px; }
+    .form-btn {
+      font-family:var(--font-body); font-size:16px; font-weight:600;
+      padding:16px 32px; border:none; border-radius:12px;
+      background:var(--accent); color:#fff; cursor:pointer;
+      transition:background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .form-btn:hover {
+      background:var(--accent-hover); transform:translateY(-1px);
+      box-shadow:0 4px 16px rgba(61,90,254,0.25);
+    }
+    .form-note { font-size:13px; color:var(--text-muted); }
+    .contact-info {
+      background:var(--bg-warm); border-radius:var(--radius);
+      padding:32px; display:flex; flex-direction:column; gap:20px;
+    }
+    .contact-info-title {
+      font-family:var(--font-display); font-size:22px; color:var(--text); margin-bottom:4px;
+    }
+    .contact-row { display:flex; flex-direction:column; gap:2px; }
+    .contact-label { font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); }
+    .contact-val {
+      font-size:16px; color:var(--text); text-decoration:none; font-weight:500; transition:color 0.2s;
+    }
+    .contact-val:hover { color:var(--accent); }
+    @media(max-width:640px) { .contact-wrapper { grid-template-columns:1fr; } }
+
+    /* --- CTA --- */
+    .cta-section {
+      padding:80px 0; text-align:center;
+      background:var(--bg-warm); border-top:1px solid var(--border);
+    }
+    .cta-title {
+      font-family:var(--font-display); font-size:clamp(28px,4vw,40px);
+      color:var(--text); margin-bottom:16px;
+    }
+    .cta-sub {
+      font-size:17px; color:var(--text-secondary);
+      margin-bottom:32px; max-width:480px; margin-left:auto; margin-right:auto;
+    }
+    .cta-btn {
+      display:inline-block; background:var(--accent); color:#fff;
+      text-decoration:none; padding:18px 40px; border-radius:12px;
+      font-size:17px; font-weight:600; font-family:var(--font-body);
+      transition:background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      background:var(--accent-hover); transform:translateY(-2px);
+      box-shadow:0 8px 24px rgba(61,90,254,0.25);
+    }
+
+    /* --- Footer --- */
+    .footer {
+      border-top:1px solid var(--border); padding:32px;
+      text-align:center; font-size:14px; color:var(--text-muted);
+    }
+    /* --- Cookie Banner --- */
+    .cookie-banner {
+      display: none; position: fixed; bottom: 0; left: 0; width: 100%;
+      background: #1a1a1a; color: #ffffff; padding: 16px 24px; z-index: 9999;
+      font-size: 0.85rem; box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+      flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .cookie-text {
+      flex: 1 1 300px; line-height: 1.5;
+    }
+    .cookie-actions {
+      display: flex; gap: 10px;
+    }
+    .cookie-btn {
+      font-family: var(--font-body); border: none; padding: 10px 20px;
+      border-radius: 4px; font-weight: 500; cursor: pointer; transition: all 0.2s;
+    }
+    .cookie-btn.accept {
+      background: #ffffff; color: #1a1a1a;
+    }
+    .cookie-btn.accept:hover {
+      background: #f0f0f0;
+    }
+    .cookie-btn.decline {
+      background: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.5);
+    }
+    .cookie-btn.decline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* --- WhatsApp & CTA --- */
+    .hero-cta-group { display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap; }
+    .wa-btn {
+      display:inline-flex; align-items:center; gap:10px;
+      background:#25D366; color:#fff;
+      padding:18px 36px; border-radius:14px;
+      font-size:17px; font-weight:600;
+      font-family:var(--font-body); text-decoration:none;
+      transition:transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s, background 0.2s;
+      box-shadow:var(--shadow-md);
+    }
+    .wa-btn:hover { background:#1EBE5A; transform:translateY(-2px); box-shadow:0 8px 24px rgba(37,211,102,0.3); }
+    .wa-btn svg { width:22px; height:22px; flex-shrink:0; }
+    .outline-btn {
+      display:inline-flex; align-items:center;
+      padding:16px 32px; border-radius:14px;
+      border:2px solid var(--border); background:transparent;
+      color:var(--text); font-size:16px; font-weight:600;
+      font-family:var(--font-body); text-decoration:none;
+      transition:border-color 0.2s, background 0.2s, transform 0.2s;
+    }
+    .outline-btn:hover { border-color:var(--text); background:var(--accent-soft); transform:translateY(-1px); }
+    .wa-fab {
+      position:fixed; bottom:28px; right:28px;
+      width:60px; height:60px; border-radius:50%;
+      background:#25D366; display:flex;
+      align-items:center; justify-content:center;
+      box-shadow:0 4px 20px rgba(37,211,102,0.4);
+      z-index:9998;
+      transition:transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s, bottom 0.3s;
+      text-decoration:none;
+    }
+    .wa-fab:hover { transform:scale(1.1); box-shadow:0 6px 28px rgba(37,211,102,0.5); }
+    .wa-fab svg { width:30px; height:30px; }
+    .pricing-note { margin-top:16px; font-size:14px; color:var(--text-muted); line-height:1.6; }
+    .contact-wa-block { text-align:center; margin-bottom:32px; }
+    .contact-wa-note { display:block; margin-top:10px; font-size:14px; color:var(--text-muted); }
+    @media(max-width:640px) {
+      .hero-cta-group { flex-direction:column; }
+      .wa-fab { bottom:20px; right:20px; width:56px; height:56px; }
+      .wa-fab svg { width:28px; height:28px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo"><img src="/veeb/assets/navik-logo.png" alt="Navik OÜ" class="nav-logo-img" width="631" height="241"></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#pricing" id="nav-pricing">Hinnad</a></li>
+        <li><a href="#portfolio" id="nav-portfolio">Tööd</a></li>
+        <li><a href="#about" id="nav-about">Minust</a></li>
+        <li><a href="#contact" id="nav-contact">Kontakt</a></li>
+      </ul>
+      <div class="lang-group">
+        <button class="lang-btn active" onclick="setLang('et')">ET</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- Hero -->
+<div class="hero reveal" id="home">
+  <div class="container">
+    <span class="hero-tag" id="tag">Veebilehed · AI abil · Navik OÜ</span>
+    <h1 id="h1">Uus koduleht <em>1–2 päevaga.</em><br>Ilma agentuuride bürokraatiata.</h1>
+    <p class="hero-sub" id="sub">Tehisintellekt teeb musta töö. Sina räägid mulle oma ärist — mina ehitan puhta, kiire ja professionaalse kodulehe.</p>
+    <div class="hero-cta-group">
+      <a href="https://wa.me/3725067651?text=Tere!%20Soovin%20kodulehte%20oma%20ettev%C3%B5ttele.%20Minu%20nimi%20on%20" target="_blank" rel="noopener" class="wa-btn">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span id="hero-wa-btn">Kirjuta WhatsAppis</span>
+      </a>
+      <a href="#contact" class="outline-btn" id="hero-form-btn">Saada päring</a>
+    </div>
+    <p class="speed-note" id="speed-note">Valmis 1–2 tööpäevaga · Mobiilisõbralik · Sinu oma serveris</p>
+  </div>
+</div>
+
+<!-- Features -->
+<div class="section reveal" id="features">
+  <div class="container">
+    <p class="section-label" id="what-label">Mida saad</p>
+    <h2 class="section-title" style="max-width:500px">Kõik, mida su äri veebis vajab.</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">◻</div>
+        <p class="feature-title" id="f1t">Sind leitakse Google'ist</p>
+        <p class="feature-desc" id="f1d">Su ettevõte ilmub otsingutulemustes. Kliendid leiavad su ise üles, mitte ainult suust-suhu.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◈</div>
+        <p class="feature-title" id="f2t">Päringud otse meilile</p>
+        <p class="feature-desc" id="f2d">Kontaktivorm lehel — kliendid kirjutavad sulle otse. Iga päring jõuab sinu postkasti.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◎</div>
+        <p class="feature-title" id="f3t">Leht on sinu oma</p>
+        <p class="feature-desc" id="f3d">Avaldame sinu domeenil ja serveris. Mingeid kuutasusid mulle, mingeid lukke — leht kuulub sulle.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◷</div>
+        <p class="feature-title" id="f4t">Valmis 1–2 päevaga</p>
+        <p class="feature-desc" id="f4d">Saadad mulle materjali, saad preview-lingi paari päevaga. Agentuurid lubavad nädalaid — mina luban päevi.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pricing -->
+<div class="section reveal" id="pricing">
+  <div class="container">
+    <p class="section-label" id="pricing-label">Hinnad</p>
+    <h2 class="section-title" style="max-width:460px">Selge hind. Varjatud kulusid pole.</h2>
+    <div class="pricing-table">
+      <div class="pricing-row">
+        <div>
+          <p class="pricing-name" id="p1n">Üheleheküljeline (one-page)</p>
+          <p class="pricing-detail" id="p1d">Hero + Teenused + Meist + Kontakt · max 5 sektsiooni</p>
+        </div>
+        <p class="pricing-price">100 €</p>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <p class="pricing-name" id="p2n">Iga lisaleht</p>
+          <p class="pricing-detail" id="p2d">Teenuse alamleht, portfoolio, galerii vm</p>
+        </div>
+        <p class="pricing-price">+ 70 €</p>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <p class="pricing-name" id="p3n">Hilisemad muudatused</p>
+          <p class="pricing-detail" id="p3d">Tekstid, pildid, väiksemad täiendused</p>
+        </div>
+        <p class="pricing-price">40 €/h</p>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <p class="pricing-name" id="p4n">Erilahendused</p>
+          <p class="pricing-detail" id="p4d">E-pood, broneerimissüsteem, keerukam funktsionaalsus</p>
+        </div>
+        <p class="pricing-price" id="p4p">Küsi pakkumist</p>
+      </div>
+    </div>
+    <p class="pricing-note" id="pricing-note">Enamik väikeettevõtteid saab hakkama ühelehelise lehega (100 €) või 2–3 lehega (kuni 240 €). Erilahendus on vajalik ainult siis, kui tahad e-poodi või broneerimissüsteemi.</p>
+  </div>
+</div>
+
+<!-- Process -->
+<div class="section reveal">
+  <div class="container">
+    <p class="section-label" id="how-label">Kuidas see käib</p>
+    <h2 class="section-title" style="max-width:500px">Neli lihtsat sammu koduleheni.</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <p class="step-title" id="s1t">Kirjuta mulle</p>
+        <p class="step-desc" id="s1d">Saada 3–4 lauset oma ärist, logo (kui on) ja kontaktinfo.</p>
+      </div>
+      <div class="step">
+        <p class="step-title" id="s2t">AI ehitab</p>
+        <p class="step-desc" id="s2d">Ehitan AI abil lehe. Saad preview-lingi 1–2 päevaga.</p>
+      </div>
+      <div class="step">
+        <p class="step-title" id="s3t">Kinnitad</p>
+        <p class="step-desc" id="s3d">Vaatad üle, annad tagasiside. Teeme parandused kuni oled rahul.</p>
+      </div>
+      <div class="step">
+        <p class="step-title" id="s4t">Live!</p>
+        <p class="step-desc" id="s4d">Makse, domeen seadistatakse — leht on sinu oma.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio -->
+<div class="section reveal" id="portfolio">
+  <div class="container">
+    <p class="section-label" id="portfolio-label">Tehtud tööd</p>
+    <h2 class="section-title" style="max-width:500px">Päris tulemused, mitte lubadused.</h2>
+    <div class="portfolio-grid">
+      <a href="https://rsauto24.ee/" target="_blank" rel="noopener" class="portfolio-card">
+        <div class="portfolio-thumb"><img src="/veeb/assets/rsauto24.webp" alt="RS Auto 24 koduleht" loading="lazy"></div>
+        <div class="portfolio-info">
+          <p class="portfolio-name">RS Auto 24</p>
+          <p class="portfolio-type" id="pt1">Autoteenindus</p>
+        </div>
+      </a>
+      <a href="https://kargu.ee/" target="_blank" rel="noopener" class="portfolio-card">
+        <div class="portfolio-thumb"><img src="/veeb/assets/kargu.webp" alt="Kargu.ee koduleht" loading="lazy"></div>
+        <div class="portfolio-info">
+          <p class="portfolio-name">Kargu.ee</p>
+          <p class="portfolio-type" id="pt2">Isiklik portaal</p>
+        </div>
+      </a>
+      <a href="https://www.kargu.ee/purjereisid/" target="_blank" rel="noopener" class="portfolio-card">
+        <div class="portfolio-thumb"><img src="/veeb/assets/purjereisid.webp" alt="Purjereisid koduleht" loading="lazy"></div>
+        <div class="portfolio-info">
+          <p class="portfolio-name">Purjereisid</p>
+          <p class="portfolio-type" id="pt3">Reisiteenused</p>
+        </div>
+      </a>
+      <a href="https://navik.ee/" target="_blank" rel="noopener" class="portfolio-card">
+        <div class="portfolio-thumb"><img src="/veeb/assets/navik.webp" alt="Navik OÜ koduleht" loading="lazy"></div>
+        <div class="portfolio-info">
+          <p class="portfolio-name">Navik</p>
+          <p class="portfolio-type" id="pt4">IT-nõustamine</p>
+        </div>
+      </a>
+      <a href="https://www.kargu.ee/okas/" target="_blank" rel="noopener" class="portfolio-card">
+        <div class="portfolio-thumb"><img src="/veeb/assets/okas.webp" alt="Okas koduleht" loading="lazy"></div>
+        <div class="portfolio-info">
+          <p class="portfolio-name">Okas</p>
+          <p class="portfolio-type" id="pt5">Kinnisvaraprojekt</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<div class="section reveal" id="about">
+  <div class="container">
+    <p class="section-label" id="about-label">Minust</p>
+    <div class="about-block">
+      <div class="about-meta">
+        <p class="about-name">Veiko-Peeter Kargu</p>
+        <p class="about-title">Navik OÜ</p>
+      </div>
+      <p class="about-text" id="about-text">Olen teinud Eesti väikeettevõtjatele kodulehti, mis toovad kliente — mitte ainult ilusaid pilte. Üle 25 aasta kogemust IT ja ettevõtluses, sealhulgas Eesti suurima IT-jaeketi ehitamine nullist üles. Täna kasutan AI-tööriistu, et teha professionaalne esindusleht murdosa tavahinnast ja murdosa tavaajast.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section reveal">
+  <div class="container">
+    <p class="section-label" id="faq-label">KKK</p>
+    <h2 class="section-title" style="max-width:460px">Korduma kippuvad küsimused</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q" id="q1">Kas 100 € on lõplik hind?</p>
+        <p class="faq-a" id="a1">Jah. 100 € on minu tööraha ühelehelise lehe eest. Sinu kanda jäävad vaid serveri ja domeeni kulud (tavaliselt 5–15 €/kuus), mille valimisel aitan.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q" id="q2">Kas ma pean maksma ettemaksu?</p>
+        <p class="faq-a" id="a2">Ei. Ehitan lehe valmis ja näitan sulle testlingi. Sa maksad alles siis, kui oled tulemusega rahul.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q" id="q3">Kes vastutab tekstide õigsuse eest?</p>
+        <p class="faq-a" id="a3">Ehitan struktuuri ja disaini. Tekstid vaatab klient üle enne avaldamist — sa näed preview-linki ja kinnitad enne, kui leht läheb live.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q" id="q4">Mis siis, kui tahan hiljem midagi muuta?</p>
+        <p class="faq-a" id="a4">Kirjutad mulle, teen muudatuse ära ja esitan arve kulunud aja eest — 40 €/h. Ei mingeid kuutasusid.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q" id="q5">Kas saan ka mitme leheküljega saidi?</p>
+        <p class="faq-a" id="a5">Jah. Iga lisaleht maksab 70 €. Keerukamad lahendused (e-pood, broneerimissüsteem) on eraldi hinnapakkumisega.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="section reveal" id="contact">
+  <div class="container">
+    <p class="section-label" id="contact-label">Võta ühendust</p>
+    <h2 class="section-title" style="max-width:500px">Räägime su projektist.</h2>
+    <div class="contact-wa-block">
+      <a href="https://wa.me/3725067651?text=Tere!%20Soovin%20kodulehte%20oma%20ettev%C3%B5ttele.%20Minu%20nimi%20on%20" target="_blank" rel="noopener" class="wa-btn">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span id="contact-wa-btn">Kirjuta WhatsAppis</span>
+      </a>
+      <span class="contact-wa-note" id="contact-wa-note">Kõige kiirem viis ühendust saada</span>
+    </div>
+    <div class="contact-wrapper">
+      <form action="https://formsubmit.co/peeter@kargu.ee" method="POST" class="contact-form">
+        <!-- Turvaseaded ja suunamine -->
+        <input type="hidden" name="_next" value="https://navik.ee/veeb/?status=success#contact">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Uus tellimus: Kodulehtede Vabrik">
+        <!-- Vormi sisuväljad -->
+        <input type="text" name="name" class="form-input" placeholder="Sinu nimi" id="form-name" required>
+        <input type="email" name="email" class="form-input" placeholder="E-post" id="form-email" required>
+        <input type="text" name="company" class="form-input" placeholder="Ettevõte (valikuline)" id="form-company">
+        <textarea name="message" class="form-textarea" placeholder="Kirjelda lühidalt oma äri ja mida soovid..." id="form-message" required></textarea>
+        <button type="submit" class="form-btn" id="form-btn">Saada päring</button>
+        <p class="form-note" style="line-height:1.5;"><span id="form-note">Vastan tavaliselt sama päeva jooksul.</span><br><span id="form-privacy" style="opacity:0.8;">Päringut saates nõustud <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Privaatsustingimustega</a>.</span></p>
+      <script>
+    // Akkordioni loogika
+    document.querySelectorAll('.accordion-header').forEach(button => {
+      button.addEventListener('click', () => {
+        const accordionItem = button.parentElement;
+        const isActive = accordionItem.classList.contains('active');
+        
+        document.querySelectorAll('.accordion-item').forEach(item => {
+          item.classList.remove('active');
+        });
+
+        if (!isActive) {
+          accordionItem.classList.add('active');
+        }
+      });
+    });
+
+    // FormSubmit staatuse kuulamine
+    window.addEventListener('DOMContentLoaded', () => {
+      // Seadista _next väärtus dünaamiliselt vastavalt praegusele domeenile
+      const nextInput = document.querySelector('input[name="_next"]');
+      if (nextInput) {
+        nextInput.value = window.location.origin + window.location.pathname + '?status=success#contact';
+      }
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const status = urlParams.get('status');
+      
+      if (status === 'success') {
+        const btn = document.getElementById('form-btn');
+        if (btn) {
+          btn.textContent = 'Kiri saadetud!';
+          btn.style.backgroundColor = '#10B981'; // Edukas roheline
+          btn.style.borderColor = '#10B981';
+          btn.style.pointerEvents = 'none'; // blokeeri uued klikid
+        }
+        // Puhastame URL-i, et peale refreshi nupp roheliseks ei jääks
+        window.history.replaceState({}, document.title, window.location.pathname + "#contact");
+      }
+    });
+  </script>
+      </form>
+      <div class="contact-info">
+        <p class="contact-info-title">Kontaktandmed</p>
+        <div class="contact-row">
+          <span class="contact-label">E-post</span>
+          <a href="mailto:peeter@kargu.ee" class="contact-val">peeter@kargu.ee</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Telefon / WhatsApp</span>
+          <a href="tel:+3725067651" class="contact-val">+372 506 7651</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/veiko-peeter-kargu/" target="_blank" rel="noopener" class="contact-val">veiko-peeter-kargu</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Facebook</span>
+          <a href="https://www.facebook.com/kargu" target="_blank" rel="noopener" class="contact-val">facebook.com/kargu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section reveal">
+  <div class="container">
+    <h2 class="cta-title" id="cta-title">Valmis alustama?</h2>
+    <p class="cta-sub" id="cta-sub">Kirjuta mulle 3–4 lauset oma ärist ja saame alustada. Leht on valmis 1–2 päevaga.</p>
+    <a href="#contact" class="cta-btn" id="cta-btn">Kirjuta mulle</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <p>© 2026 Navik OÜ (Reg: 17454389) · <span id="footer-text">Veiko-Peeter Kargu</span></p>
+  <p style="font-size: 13px; margin-top: 8px; opacity: 0.6;"><a href="/kasutustingimused" id="footer-terms" style="color: inherit; text-decoration: underline;">Kasutustingimused</a> &middot; <a href="/privaatsuspoliitika" style="color: inherit; text-decoration: underline;">Privaatsuspoliitika</a></p>
+</footer>
+
+<script>
+const T={et:{'nav-pricing':'Hinnad','nav-portfolio':'Tööd','nav-about':'Minust','nav-contact':'Kontakt',tag:'Veebilehed · AI abil · Navik OÜ',h1:'Uus koduleht <em>1–2 päevaga.</em><br>Ilma agentuuride bürokraatiata.',sub:'Tehisintellekt teeb musta töö. Sina räägid mulle oma ärist — mina ehitan puhta, kiire ja professionaalse kodulehe.','price-label':'üheleheküljeline leht','hero-wa-btn':'Kirjuta WhatsAppis','hero-form-btn':'Saada päring','speed-note':'Valmis 1–2 tööpäevaga · Mobiilisõbralik · Sinu oma serveris','what-label':'Mida saad',f1t:"Sind leitakse Google'ist",f1d:'Su ettevõte ilmub otsingutulemustes. Kliendid leiavad su ise üles, mitte ainult suust-suhu.',f2t:'Päringud otse meilile',f2d:'Kontaktivorm lehel — kliendid kirjutavad sulle otse. Iga päring jõuab sinu postkasti.',f3t:'Leht on sinu oma',f3d:'Avaldame sinu domeenil ja serveris. Mingeid kuutasusid mulle, mingeid lukke — leht kuulub sulle.',f4t:'Valmis 1–2 päevaga',f4d:'Saadad mulle materjali, saad preview-lingi paari päevaga. Agentuurid lubavad nädalaid — mina luban päevi.','pricing-label':'Hinnad',p1n:'Üheleheküljeline (one-page)',p1d:'Hero + Teenused + Meist + Kontakt · max 5 sektsiooni',p2n:'Iga lisaleht',p2d:'Teenuse alamleht, portfoolio, galerii vm',p3n:'Hilisemad muudatused',p3d:'Tekstid, pildid, väiksemad täiendused',p4n:'Erilahendused',p4d:'E-pood, broneerimissüsteem, keerukam funktsionaalsus',p4p:'Küsi pakkumist','pricing-note':'Enamik väikeettevõtteid saab hakkama ühelehelise lehega (100 €) või 2–3 lehega (kuni 240 €). Erilahendus on vajalik ainult siis, kui tahad e-poodi või broneerimissüsteemi.','how-label':'Kuidas see käib',s1t:'Kirjuta mulle',s1d:'Saada 3–4 lauset oma ärist, logo (kui on) ja kontaktinfo.',s2t:'AI ehitab',s2d:'Ehitan AI abil lehe. Saad preview-lingi 1–2 päevaga.',s3t:'Kinnitad',s3d:'Vaatad üle, annad tagasiside. Teeme parandused kuni oled rahul.',s4t:'Live!',s4d:'Makse, domeen seadistatakse — leht on sinu oma.','portfolio-label':'Tehtud tööd',pt1:'Autoteenindus',pt2:'Isiklik portaal',pt3:'Reisiteenused',pt4:'IT-nõustamine',pt5:'Kinnisvaraprojekt','about-label':'Minust','about-text':'Olen teinud Eesti väikeettevõtjatele kodulehti, mis toovad kliente — mitte ainult ilusaid pilte. Üle 25 aasta kogemust IT ja ettevõtluses, sealhulgas Eesti suurima IT-jaeketi ehitamine nullist üles. Täna kasutan AI-tööriistu, et teha professionaalne esindusleht murdosa tavahinnast ja murdosa tavaajast.','faq-label':'KKK',q1:'Kas 100 € on lõplik hind?',a1:'Jah. 100 € on minu tööraha ühelehelise lehe eest. Sinu kanda jäävad vaid serveri ja domeeni kulud (tavaliselt 5–15 €/kuus), mille valimisel aitan.',q2:'Kas ma pean maksma ettemaksu?',a2:'Ei. Ehitan lehe valmis ja näitan sulle testlingi. Sa maksad alles siis, kui oled tulemusega rahul.',q3:'Kes vastutab tekstide õigsuse eest?',a3:'Ehitan struktuuri ja disaini. Tekstid vaatab klient üle enne avaldamist — sa näed preview-linki ja kinnitad enne, kui leht läheb live.',q4:'Mis siis, kui tahan hiljem midagi muuta?',a4:'Kirjutad mulle, teen muudatuse ära ja esitan arve kulunud aja eest — 40 €/h. Ei mingeid kuutasusid.',q5:'Kas saan ka mitme leheküljega saidi?',a5:'Jah. Iga lisaleht maksab 70 €. Keerukamad lahendused (e-pood, broneerimissüsteem) on eraldi hinnapakkumisega.','contact-label':'Võta ühendust','contact-wa-btn':'Kirjuta WhatsAppis','contact-wa-note':'Kõige kiirem viis ühendust saada','form-name':'Sinu nimi','form-email':'E-post','form-company':'Ettevõte (valikuline)','form-message':'Kirjelda lühidalt oma äri ja mida soovid...','form-btn':'Saada päring','form-note':'Vastan tavaliselt sama päeva jooksul.','form-privacy':'Päringut saates nõustud <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Privaatsustingimustega</a>.','cta-title':'Valmis alustama?','cta-sub':'Kirjuta mulle 3–4 lauset oma ärist ja saame alustada. Leht on valmis 1–2 päevaga.','cta-btn':'Kirjuta mulle','footer-text':'Veiko-Peeter Kargu · Navik OÜ','cookie-text':'Sellel veebilehel kasutame küpsiseid (sh Google Analytics), et analüüsida liiklust ja pakkuda parimat kasutajakogemust.','cookie-accept':'Nõustun','cookie-decline':'Keeldun'},en:{'nav-pricing':'Pricing','nav-portfolio':'Work','nav-about':'About','nav-contact':'Contact',tag:'Websites · AI-powered · Navik OÜ',h1:'A new website <em>in 1–2 days.</em><br>Without agency bureaucracy.',sub:'AI does the heavy lifting. You tell me about your business — I build a clean, fast, professional website.','price-label':'one-page website','hero-wa-btn':'Write on WhatsApp','hero-form-btn':'Send enquiry','speed-note':'Ready in 1–2 business days · Mobile-friendly · Hosted on your server','what-label':'What you get',f1t:'Found on Google',f1d:'Your business appears in search results. Clients find you on their own, not just through word of mouth.',f2t:'Enquiries to your inbox',f2d:'A contact form on your site — clients write to you directly. Every enquiry lands in your inbox.',f3t:'The site is yours',f3d:'Published on your domain and server. No monthly fees to me, no locks — the site belongs to you.',f4t:'Ready in 1–2 days',f4d:'Send me your materials, get a preview link within days. Agencies promise weeks — I promise days.','pricing-label':'Pricing',p1n:'One-page website',p1d:'Hero + Services + About + Contact · max 5 sections',p2n:'Each additional page',p2d:'Service subpage, portfolio, gallery, etc.',p3n:'Future changes',p3d:'Text, images, minor updates',p4n:'Custom solutions',p4d:'E-commerce, booking system, complex functionality',p4p:'Request a quote','pricing-note':'Most small businesses do well with a one-page site (100 €) or 2–3 pages (up to 240 €). A custom solution is needed only for e-commerce or booking systems.','how-label':'How it works',s1t:'Write to me',s1d:'Send 3–4 sentences about your business, your logo (if available) and contact details.',s2t:'AI builds',s2d:'I build the site using AI. You get a preview link in 1–2 days.',s3t:'You review',s3d:'You check it over, give feedback. We refine until you are happy.',s4t:'Live!',s4d:'Payment, domain is set up — the site is yours.','portfolio-label':'Portfolio',pt1:'Auto services',pt2:'Personal portal',pt3:'Travel services',pt4:'IT consulting',pt5:'Real estate project','about-label':'About me','about-text':"I've built websites for Estonian small businesses that bring clients — not just pretty pictures. Over 25 years of experience in IT and business, including building Estonia's largest IT retail chain from scratch. Today I use AI tools to create professional business websites at a fraction of the usual cost and time.",'faq-label':'FAQ',q1:'Is 100 € the final price?',a1:'Yes. 100 € is my fee for a one-page site. You only pay for your server and domain (typically 5–15 €/month), which I help you set up.',q2:'Do I need to pay upfront?',a2:'No. I build the site and share a test link. You pay only when you are happy with the result.',q3:'Who is responsible for the content?',a3:'I build the structure and design. You review the texts before publishing — you see a preview and confirm before it goes live.',q4:'What if I want changes later?',a4:'Write to me, I make the change and invoice for time spent — 40 €/h. No monthly fees.',q5:'Can I get a multi-page site?',a5:'Yes. Each additional page costs 70 €. Complex solutions (e-commerce, booking) are quoted separately.','contact-label':'Get in touch','contact-wa-btn':'Write on WhatsApp','contact-wa-note':'The fastest way to get in touch','form-name':'Your name','form-email':'Email','form-company':'Company (optional)','form-message':'Briefly describe your business and what you need...','form-btn':'Send enquiry','form-note':'I usually reply within the same day.','form-privacy':'By sending an enquiry, you agree to our <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.','cta-title':'Ready to start?','cta-sub':'Write me 3–4 sentences about your business and we can begin. Site ready in 1–2 days.','cta-btn':'Write to me','footer-text':'Veiko-Peeter Kargu · Navik OÜ','cookie-text':'We use cookies (incl. Google Analytics) on this website to analyze traffic and provide the best user experience.','cookie-accept':'Accept','cookie-decline':'Decline'},ru:{'nav-pricing':'Цены','nav-portfolio':'Работы','nav-about':'Обо мне','nav-contact':'Контакт',tag:'Веб-сайты · На основе ИИ · Navik OÜ',h1:'Новый сайт <em>за 1–2 дня.</em><br>Без бюрократии агентств.',sub:'ИИ делает всю тяжёлую работу. Вы рассказываете о бизнесе — я создаю чистый, быстрый и профессиональный сайт.','price-label':'одностраничный сайт','hero-wa-btn':'Написать в WhatsApp','hero-form-btn':'Отправить запрос','speed-note':'Готово за 1–2 рабочих дня · Мобильная версия · На вашем сервере','what-label':'Что вы получаете',f1t:'Вас найдут в Google',f1d:'Ваш бизнес появится в результатах поиска. Клиенты найдут вас сами, а не только через сарафанное радио.',f2t:'Заявки прямо на почту',f2d:'Контактная форма на сайте — клиенты пишут вам напрямую. Каждая заявка приходит в ваш почтовый ящик.',f3t:'Сайт полностью ваш',f3d:'Публикуем на вашем домене и сервере. Никаких ежемесячных платежей мне, никаких замков — сайт принадлежит вам.',f4t:'Готово за 1–2 дня',f4d:'Отправляете материалы, получаете превью-ссылку за пару дней. Агентства обещают недели — я обещаю дни.','pricing-label':'Цены',p1n:'Одностраничный сайт',p1d:'Hero + Услуги + О нас + Контакты · макс. 5 секций',p2n:'Каждая доп. страница',p2d:'Страница услуги, портфолио, галерея',p3n:'Будущие изменения',p3d:'Тексты, изображения, небольшие правки',p4n:'Нестандартные решения',p4d:'Интернет-магазин, система бронирования, сложная функциональность',p4p:'Запросить расчёт','pricing-note':'Большинству малых предприятий достаточно одностраничного сайта (100 €) или 2–3 страниц (до 240 €). Нестандартное решение нужно только для интернет-магазина или системы бронирования.','how-label':'Как это работает',s1t:'Напишите мне',s1d:'Отправьте 3–4 предложения о бизнесе, логотип (если есть) и контакты.',s2t:'ИИ строит',s2d:'Я создаю сайт с помощью ИИ. Превью-ссылка за 1–2 дня.',s3t:'Вы проверяете',s3d:'Просматриваете, даёте обратную связь. Вносим правки, пока не довольны.',s4t:'Запуск!',s4d:'Оплата, настройка домена — сайт ваш.','portfolio-label':'Портфолио',pt1:'Автосервис',pt2:'Личный портал',pt3:'Туристические услуги',pt4:'IT-консалтинг',pt5:'Проект недвижимости','about-label':'Обо мне','about-text':'Я создаю сайты для малого бизнеса Эстонии, которые приводят клиентов — а не просто красивые картинки. Более 25 лет опыта в IT и бизнесе, включая создание крупнейшей IT-сети Эстонии с нуля. Сегодня я использую ИИ, чтобы создавать профессиональные бизнес-сайты за долю обычной стоимости и времени.','faq-label':'FAQ',q1:'100 € — это окончательная цена?',a1:'Да. 100 € — моя плата за одностраничный сайт. Вы оплачиваете только хостинг и домен (обычно 5–15 €/мес.).',q2:'Нужна ли предоплата?',a2:'Нет. Я создаю сайт и показываю тестовую ссылку. Вы платите только когда довольны результатом.',q3:'Кто отвечает за тексты?',a3:'Я строю структуру и дизайн. Клиент проверяет тексты перед публикацией.',q4:'Что если захочу изменения позже?',a4:'Напишите мне, сделаю правки и выставлю счёт — 40 €/ч. Никаких ежемесячных платежей.',q5:'Можно заказать многостраничный сайт?',a5:'Да. Каждая доп. страница — 70 €. Сложные решения (магазин, бронирование) — по запросу.','contact-label':'Связаться','contact-wa-btn':'Написать в WhatsApp','contact-wa-note':'Самый быстрый способ связаться','form-name':'Ваше имя','form-email':'Email','form-company':'Компания (необязательно)','form-message':'Кратко опишите бизнес и что вам нужно...','form-btn':'Отправить запрос','form-note':'Обычно отвечаю в тот же день.','form-privacy':'Отправляя запрос, вы соглашаетесь с нашей <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Политикой конфиденциальности</a>.','cta-title':'Готовы начать?','cta-sub':'Напишите 3–4 предложения о вашем бизнесе — и мы начнём. Сайт готов за 1–2 дня.','cta-btn':'Написать мне','footer-text':'Veiko-Peeter Kargu · Navik OÜ','cookie-text':'Мы используем файлы cookie (вкл. Google Analytics) на этом сайте для анализа трафика и предоставления лучшего пользовательского опыта.','cookie-accept':'Принимаю','cookie-decline':'Отказываюсь'}};
+
+function setLang(l){const t=T[l];document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.trim()===l.toUpperCase()));for(const[id,v]of Object.entries(t)){const el=document.getElementById(id);if(!el)continue;if(el.tagName==='INPUT'||el.tagName==='TEXTAREA')el.placeholder=v;else if(el.tagName==='BUTTON'||el.tagName==='A')el.textContent=v;else el.innerHTML=v;}const s=document.querySelector('input[name="_subject"]');if(s)s.value=l==='ru'?'Новый запрос на сайт':l==='en'?'New website enquiry':'Uus kodulehe päring';document.documentElement.lang=l;}
+
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/3725067651?text=Tere!%20Soovin%20kodulehte%20oma%20ettev%C3%B5ttele.%20Minu%20nimi%20on%20" target="_blank" rel="noopener" class="wa-fab" id="wa-fab" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-text" id="cookie-text">
+    Sellel veebilehel kasutame küpsiseid (sh Google Analytics), et analüüsida liiklust ja pakkuda parimat kasutajakogemust.
+  </div>
+  <div class="cookie-actions">
+    <button onclick="acceptCookies()" class="cookie-btn accept" id="cookie-accept">Nõustun</button>
+    <button onclick="declineCookies()" class="cookie-btn decline" id="cookie-decline">Keeldun</button>
+  </div>
+</div>
+
+<script>
+  function adjustFab(v) {
+    var fab = document.getElementById('wa-fab');
+    if (fab) fab.style.bottom = v ? '90px' : '';
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'flex';
+      adjustFab(true);
+    }
+  });
+
+  function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+    adjustFab(false);
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+      });
+    }
+  }
+
+  function declineCookies() {
+    localStorage.setItem('cookiesAccepted', 'false');
+    document.getElementById('cookie-banner').style.display = 'none';
+    adjustFab(false);
+  }
+</script>
+
+</body>
+</html>

@@ -5,15 +5,16 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Vabrik müügileht serveeritakse staatiliselt public/veeb/ kaustast
   async rewrites() {
     return [
       {
         source: '/veeb',
-        destination: 'https://www.kargu.ee/veeb/',
+        destination: '/veeb/index.html',
       },
       {
-        source: '/veeb/:path+',
-        destination: 'https://www.kargu.ee/veeb/:path+',
+        source: '/veeb/',
+        destination: '/veeb/index.html',
       },
     ];
   },
