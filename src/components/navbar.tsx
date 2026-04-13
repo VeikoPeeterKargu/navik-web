@@ -111,17 +111,31 @@ export function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.07 }}
               >
-                <Link
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={cn(
-                    'block text-2xl font-light py-4 border-b border-[#2A2820] transition-colors',
-                    pathname === item.href ? 'text-[#C9A027]' : 'text-[#F8F5EE] hover:text-[#C9A027]'
-                  )}
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  {item.name}
-                </Link>
+                {item.href === '/veeb' ? (
+                  <a
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={cn(
+                      'block text-2xl font-light py-4 border-b border-[#2A2820] transition-colors',
+                      pathname === item.href ? 'text-[#C9A027]' : 'text-[#F8F5EE] hover:text-[#C9A027]'
+                    )}
+                    style={{ fontFamily: 'var(--font-display)' }}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={cn(
+                      'block text-2xl font-light py-4 border-b border-[#2A2820] transition-colors',
+                      pathname === item.href ? 'text-[#C9A027]' : 'text-[#F8F5EE] hover:text-[#C9A027]'
+                    )}
+                    style={{ fontFamily: 'var(--font-display)' }}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </motion.div>
             ))}
             <motion.div
@@ -148,9 +162,13 @@ export function Navbar() {
 
 function NavLink({ item, pathname }: { item: { name: string; href: string }; pathname: string }) {
   const isActive = pathname === item.href;
+  // /veeb on staatiline HTML (public/veeb/), vajab täislehe navigatsiooni
+  const isStatic = item.href === '/veeb';
+  const Tag = isStatic ? 'a' : Link;
+  const linkProps = isStatic ? { href: item.href } : { href: item.href };
   return (
-    <Link
-      href={item.href}
+    <Tag
+      {...linkProps}
       className={cn(
         'relative text-[1.07rem] tracking-[0.1em] transition-colors pb-0.5',
         isActive ? 'text-[#C9A027]' : 'text-[#F8F5EE]/85 hover:text-[#F8F5EE]'
@@ -166,6 +184,6 @@ function NavLink({ item, pathname }: { item: { name: string; href: string }; pat
           transition={{ type: 'spring', stiffness: 350, damping: 32 }}
         />
       )}
-    </Link>
+    </Tag>
   );
 }
