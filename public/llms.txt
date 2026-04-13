@@ -6,7 +6,7 @@ Asutaja: Veiko-Peeter Kargu — IT-konsultant, asukoht Tallinn, Eesti.
 
 ## Täisversioon
 
-Detailne ülevaade kõikidest teenustest, hindadest ja taustast: [llms-full.txt](https://kargu.ee/navik/llms-full.txt)
+Detailne ülevaade kõikidest teenustest, hindadest ja taustast: [llms-full.txt](https://navik.ee/llms-full.txt)
 
 ## Mida me teeme
 
@@ -27,7 +27,7 @@ Veiko-Peeter Kargu on istunud IT-läbirääkimistelaua igal küljel:
 
 ## Kontakt
 
-- Veebileht: https://kargu.ee/navik
+- Veebileht: https://navik.ee
 - E-post: peeter@kargu.ee
 - Telefon: +372 50 67 651
 - Asukoht: Tallinn, Eesti
@@ -35,4 +35,4 @@ Veiko-Peeter Kargu on istunud IT-läbirääkimistelaua igal küljel:
 
 ## Esimene samm
 
-Esimene 30-minutiline konsultatsioon on tasuta. Broneeri aeg: https://kargu.ee/navik/kontakt/
+Esimene 30-minutiline konsultatsioon on tasuta. Broneeri aeg: https://navik.ee/kontakt/

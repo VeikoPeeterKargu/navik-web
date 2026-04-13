@@ -42,7 +42,7 @@ See kolmekordne kogemus tähendab: ma tean, kuidas IT-müüjad mõtlevad, kuidas
 - IT-müüja surub peale tarkvara, aga juht pole kindel kas see sobib
 - Eelmine ERP-projekt kukkus läbi ja uuesti investeerimine tekitab hirmu
 
-**URL:** https://kargu.ee/navik/audit/
+**URL:** https://navik.ee/audit/
 
 ---
 
@@ -62,7 +62,7 @@ See kolmekordne kogemus tähendab: ma tean, kuidas IT-müüjad mõtlevad, kuidas
 - IT-kulud kasvavad, aga efektiivsus mitte
 - Tegevjuht kulutab 30% oma ajast IT-probleemidele
 
-**URL:** https://kargu.ee/navik/digijuht/
+**URL:** https://navik.ee/digijuht/
 
 ---
 
@@ -81,7 +81,7 @@ See kolmekordne kogemus tähendab: ma tean, kuidas IT-müüjad mõtlevad, kuidas
 - Kliendipäringutele vastamine on aeglane ja ebaühtlane
 - Juhtkond tahab AI-d kasutada, aga ei tea kust alustada
 
-**URL:** https://kargu.ee/navik/ai/
+**URL:** https://navik.ee/ai/
 
 ---
 
@@ -89,7 +89,7 @@ See kolmekordne kogemus tähendab: ma tean, kuidas IT-müüjad mõtlevad, kuidas
 
 Esimene 30-minutiline konsultatsioon on **tasuta**. Pärast vestlust saad selge ülevaate oma olukorrast ja konkreetsed soovitused — ilma kohustuseta.
 
-**Broneeri aeg:** https://kargu.ee/navik/kontakt/
+**Broneeri aeg:** https://navik.ee/kontakt/
 
 ---
 
@@ -100,7 +100,7 @@ Esimene 30-minutiline konsultatsioon on **tasuta**. Pärast vestlust saad selge 
 - **Asutaja:** Veiko-Peeter Kargu
 - **E-post:** peeter@kargu.ee
 - **Telefon:** +372 50 67 651
-- **Veebileht:** https://kargu.ee/navik
+- **Veebileht:** https://navik.ee
 - **Alternatiivne domeen:** https://navik.ee
 - **Asukoht:** Tallinn, Eesti
 - **Tegevuspiirkond:** Eesti (kaugtöö ka rahvusvaheliselt)
