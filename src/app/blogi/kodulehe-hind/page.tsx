@@ -89,6 +89,31 @@ export default function KoduleheHindPage() {
         ]
     };
 
+    const reviewJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": {
+            "@type": "Service",
+            "name": "Kodulehe loomine",
+            "provider": {
+                "@type": "Organization",
+                "name": "Navik OÜ",
+                "url": "https://navik.ee"
+            }
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Raul"
+        },
+        "reviewBody": "Mina juba sain seda teenust ja väga rahul. Kui mõnel tuttaval ka vaja siis kindlasti soovitan!",
+        "datePublished": "2026-04-15"
+    };
+
     return (
         <main className="flex min-h-screen flex-col items-center justify-start pt-32 pb-16 px-4 md:px-6">
             <script
@@ -98,6 +123,10 @@ export default function KoduleheHindPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
             />
             <article className="max-w-3xl w-full">
                 {/* Breadcrumb */}
@@ -228,6 +257,19 @@ export default function KoduleheHindPage() {
                                 <p className="text-muted-foreground text-sm leading-relaxed">
                                     Tulemus: puhas HTML/CSS leht ilma WordPressita, Google Analytics, GDPR-compliant küpsisebanner, JSON-LD schema ja täielik SEO ülesseadmine — kõik <strong className="text-foreground">murdu sellest, mida agentuur oleks küsinud.</strong>
                                 </p>
+                                {/* Client testimonial */}
+                                <blockquote className="mt-5 pt-5 border-t border-primary/20">
+                                    <p className="text-foreground italic leading-relaxed mb-3">
+                                        &ldquo;Mina juba sain seda teenust ja väga rahul. Kui mõnel tuttaval ka vaja siis kindlasti soovitan!&rdquo;
+                                    </p>
+                                    <footer className="flex items-center gap-2 text-sm">
+                                        <span className="text-primary font-semibold">Raul</span>
+                                        <span className="text-muted-foreground">·</span>
+                                        <a href="https://rsauto24.ee" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                                            RS Auto 24
+                                        </a>
+                                    </footer>
+                                </blockquote>
                             </div>
                         </div>
                     </section>
