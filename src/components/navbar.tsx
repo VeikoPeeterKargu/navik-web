@@ -114,6 +114,8 @@ export function Navbar() {
                 {item.href === '/veeb' ? (
                   <a
                     href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setMobileOpen(false)}
                     className={cn(
                       'block text-2xl font-light py-4 border-b border-[#2A2820] transition-colors',
@@ -165,7 +167,9 @@ function NavLink({ item, pathname }: { item: { name: string; href: string }; pat
   // /veeb on staatiline HTML (public/veeb/), vajab täislehe navigatsiooni
   const isStatic = item.href === '/veeb';
   const Tag = isStatic ? 'a' : Link;
-  const linkProps = isStatic ? { href: item.href } : { href: item.href };
+  const linkProps = isStatic
+    ? { href: item.href, target: '_blank' as const, rel: 'noopener noreferrer' }
+    : { href: item.href };
   return (
     <Tag
       {...linkProps}
