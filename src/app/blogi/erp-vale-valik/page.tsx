@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: '5 märki, et su ERP valik on vale — enne kui on hilja | Navik',
-    description: '73% ERP projektidest ületab eelarvet. Siin on 5 selget hoiatusmärki, mida ettevõtjad ignoreerivad — ja kuidas sõltumatu audit aitab vältida 50 000€+ kaotust.',
+    description: 'Enamik ERP projekte ületab eelarvet ja ajakava. Siin on 5 selget hoiatusmärki, mida ettevõtjad ignoreerivad — ja kuidas sõltumatu audit aitab vältida 50 000€+ kaotust.',
     alternates: {
         canonical: 'https://navik.ee/blogi/erp-vale-valik',
     },
@@ -22,7 +22,7 @@ export default function ErpValeValikPage() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "5 märki, et su ERP valik on vale — enne kui on hilja",
-        "description": "73% ERP projektidest ületab eelarvet. 5 hoiatusmärki ja kuidas sõltumatu audit aitab.",
+        "description": "Enamik ERP projekte ületab eelarvet ja ajakava. 5 hoiatusmärki ja kuidas sõltumatu audit aitab.",
         "datePublished": "2026-04-15",
         "dateModified": "2026-04-15",
         "author": { "@type": "Person", "name": "Veiko-Peeter Kargu", "url": "https://kargu.ee" },
@@ -31,9 +31,41 @@ export default function ErpValeValikPage() {
         "keywords": ["ERP valik", "ERP audit", "IT audit", "tarkvara valik", "ERP projekt"]
     };
 
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Kui kaua kestab ERP juurutamine?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ERP juurutamise keskmine kestus on 12\u201318 kuud. Kui keegi lubab 3 kuud, siis kas l\u00f5igatakse nurki, unustatakse andmemigratsioon v\u00f5i m\u00fc\u00fcakse midagi, mis pole p\u00e4ris ERP. K\u00fcsi alati detailset ajajoonist iga faasi jaoks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Mis on ERP projekti suurim varjatud kulu?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Muudatused (change requests) on ERP projektide suurim varjatud kulu. N\u00f5ua pakkumises eraldi rida muudatuste tunnihinnaga p\u00e4rast scope freeze\u2019t. Kui see on \u00fcle 150 \u20ac/h, kaalusta alternatiive."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kas v\u00e4ikeettev\u00f5te vajab ERP-d?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Mitte alati. Paljud v\u00e4ikeettev\u00f5tted saavad h\u00e4sti hakkama raamatupidamistarkvara + eraldi CRM-i + t\u00f6\u00f6riistade kombinatsiooniga. ERP tasub ennast \u00e4ra alates 20\u201350 t\u00f6\u00f6tajast, kui protsessid on piisavalt keerulised. S\u00f5ltumatu audit aitab otsustada."
+                }
+            }
+        ]
+    };
+
     return (
         <main className="flex min-h-screen flex-col items-center justify-start pt-32 pb-16 px-4 md:px-6">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
             <article className="max-w-3xl w-full">
                 {/* Breadcrumb */}
                 <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
@@ -55,7 +87,7 @@ export default function ErpValeValikPage() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">vale</span>
                     </h1>
                     <p className="text-xl text-muted-foreground leading-relaxed">
-                        Panorama Consulting&apos;i 2025. aasta uuring näitab: <strong className="text-foreground">73% ERP projektidest ületab eelarvet</strong> ja <strong className="text-foreground">keskmiselt 215% algsest plaanist.</strong> Siin on 5 hoiatusmärki, mida sa saad kontrollida ENNE lepingule allkirjastamist.
+                        Tööstuse uuringud näitavad järjepidevalt: <strong className="text-foreground">enamik ERP projekte ületab eelarvet</strong> ja ajakava, sageli <strong className="text-foreground">kordades algse plaani.</strong> Siin on 5 hoiatusmärki, mida sa saad kontrollida ENNE lepingule allkirjastamist.
                     </p>
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mt-4">
                         <span>Veiko-Peeter Kargu</span>
@@ -151,10 +183,13 @@ export default function ErpValeValikPage() {
                     <section>
                         <h2 className="text-2xl font-bold mb-4 text-foreground">Kokkuvõte: üks lihtsus enne suurt otsust</h2>
                         <p className="text-muted-foreground leading-relaxed mb-4">
-                            ERP valik on üks kallimaid otsuseid, mida väikeettevõte teeb. Vale valik ei maksa ainult raha — see maksab aega, meeskonna motivatsiooni ja konkurentsivõimet. Kui sul pole ettevõttes kedagi, kes seda otsust juhiks, loe meie artiklit <Link href="/blogi/digijuht-vs-it-juht" className="text-primary hover:underline">digijuhist vs IT-juhist</Link>.
+                            ERP valik on üks kallimaid otsuseid, mida ettevõte teeb. Vale valik ei maksa ainult raha — see maksab aega, meeskonna motivatsiooni ja konkurentsivõimet. Kui sul pole ettevõttes kedagi, kes seda otsust juhiks, loe meie artiklit <Link href="/blogi/digijuht-vs-it-juht" className="text-primary hover:underline">digijuhist vs IT-juhist</Link>.
                         </p>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed mb-4">
                             <strong className="text-foreground">Üks sõltumatu pilk enne lepingut</strong> — see on kõik, mis vaja. Mitte teine müügikõne. Mitte veel üks demo. Vaid aus hinnang: osta, ära osta, või oota. Ja pärast otsust — <Link href="/blogi/ai-automatiseerimine" className="text-primary hover:underline">automatiseeri korduvad protsessid AI-ga</Link>, et investeering end kiiremini ära tasuks.
+                        </p>
+                        <p className="text-sm text-muted-foreground italic">
+                            Artikli autor on 30 aasta jooksul istunud IT-läbirääkimiste laua igal poolel: ostjana (Eesti Raudtee IT-hange), müüjana (BCS Itera ERP) ja ettevõtjana (Klick Eesti, 0–30 kauplust).
                         </p>
                     </section>
 

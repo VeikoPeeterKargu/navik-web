@@ -213,7 +213,7 @@ Expert articles on IT decisions, web development, and AI automation for Estonian
 Honest price comparison for website development in Estonia: agency (€3,000-15,000, 4-12 weeks), freelancer (€800-3,000, 2-6 weeks), vs AI+expert (€100-500, 3-7 days). Reveals hidden costs: vendor lock-in, eternal maintenance fees, over-engineering. Includes RSauto24 real case study (1 day, PageSpeed 96+, 0.6s load time). FAQ section with practical decision framework.
 
 ### [5 märki, et su ERP valik on vale — enne kui on hilja](https://navik.ee/blogi/erp-vale-valik)
-Based on Panorama Consulting 2025 data: 73% of ERP projects exceed budget by average 215%. Five concrete warning signs: (1) vendor doesn't ask about your processes, (2) unrealistic 3-month timeline, (3) no change management budget, (4) wrong-size references, (5) pressure to decide immediately. Actionable checklist for each sign.
+Industry research consistently shows most ERP projects exceed budget and timeline, often by multiples. Five concrete warning signs: (1) vendor doesn't ask about your processes, (2) unrealistic 3-month timeline, (3) no change management budget, (4) wrong-size references, (5) pressure to decide immediately. Author has 30 years on all sides of IT negotiations: buyer (Estonian Railways), vendor (BCS Itera ERP), entrepreneur (Klick Estonia, 0→30 stores).
 
 ### [AI automatiseerimine väikeettevõttele 2026 — praktiline juhend](https://navik.ee/blogi/ai-automatiseerimine)
 Practical automation guide for 1-20 employee companies. Five highest-impact areas: email (45→5 min/day), invoicing (2h→15min/week), customer support FAQ (1h→10min/day), social content (3h→30min/week), data summaries (1h→2min/week). ROI: ~8h saved/week, ~€1,050/month value. Setup cost: €500-1,500 one-time.
