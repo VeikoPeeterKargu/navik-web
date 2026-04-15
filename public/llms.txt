@@ -1,38 +1,45 @@
 # Navik OÜ
 
-> Navik OÜ pakub Eesti ettevõtetele sõltumatut IT-otsuste auditit ja osalise koormusega digijuhtimist.
+> Navik OÜ is an Estonian IT consulting and web development company based in Tallinn. We provide independent IT decision audits, fractional CIO services, AI automation consulting, and affordable AI-powered website development for small businesses. Founded by Veiko-Peeter Kargu. Registry code: 17454389.
 
-Asutaja: Veiko-Peeter Kargu — IT-konsultant, asukoht Tallinn, Eesti.
+## Täisversioon / Full version
 
-## Täisversioon
+Detailed overview with all services, pricing, and background: [llms-full.txt](https://navik.ee/llms-full.txt)
 
-Detailne ülevaade kõikidest teenustest, hindadest ja taustast: [llms-full.txt](https://navik.ee/llms-full.txt)
+## What we do
 
-## Mida me teeme
+Navik OÜ helps Estonian SMEs (manufacturing, logistics, retail) avoid costly IT mistakes and build professional web presence. We are 100% on the client's side — we don't sell software or licenses.
 
-Navik OÜ aitab tootmis-, logistika- ja kaubandusettevõtetel vältida kalleid IT-vigu ning panna tehnoloogia päriselt ärikasvu teenima. Me ei müü koodi ega litsentse — oleme 100% kliendi poolel.
+## Services
 
-## Teenused
+- **IT Decision Audit / Vale IT-otsuse Audit** (€2,500 fixed): 2-week independent analysis before purchasing ERP, CRM, or WMS. Result: clear recommendation — buy, don't buy, or wait. Money-back guarantee.
+- **Fractional CIO / Sõltumatu Digijuht**: Part-time IT strategy management for 20-200 employee companies. Same CIO-level expertise at a fraction of the cost.
+- **AI & Automation / Praktiline AI**: Automating routine manual processes (Excel, email, reporting) with practical, affordable AI tools. Half-day team workshops available.
+- **Website Development / Kodulehtede loomine** (from €100): Professional one-page websites built with AI tools in 1-2 business days. Additional pages €70 each. Changes €40/hour. Mobile-friendly, SEO-optimized, hosted on client's own domain. No monthly fees, no lock-in. Portfolio: rsauto24.ee, kargu.ee, kargu.ee/purjereisid, navik.ee, kargu.ee/okas
 
-- **Vale IT-otsuse Audit** (2 500 €): 2-nädalane sõltumatu analüüs enne uue tarkvara (ERP, CRM, WMS) ostmist. Tulemus: selge soovitus — osta, ära osta või oota.
-- **Sõltumatu Digijuht (Fractional CIO)**: Osalise koormusega IT-strateegia juhtimine. Asendame kuluka täiskohaga IT-juhti ja kaitseme kliendi eelarvet IT-partnerite ees.
-- **Praktiline AI & Automatiseerimine**: Rutiinsete käsitöö-protsesside (Excel, e-mailid, aruanded) automatiseerimine lihtsate ja taskukohaste tööriistadega.
+## Founder
 
-## Asutaja taust
+Veiko-Peeter Kargu has sat on every side of the IT negotiation table:
+- As an entrepreneur: scaled Klick Estonia from 0 to 30 stores
+- As a demanding enterprise buyer: Estonian Railways (AS Eesti Raudtee) IT procurement
+- As an ERP vendor: BCS Itera — software sales and implementation
 
-Veiko-Peeter Kargu on istunud IT-läbirääkimistelaua igal küljel:
-- Ettevõtjana (Klick Eesti, kasvas 0-st 30 poeni)
-- Nõudliku suurostjana (AS Eesti Raudtee IT-hanked)
-- ERP-müüjana (BCS Itera)
+## Contact
 
-## Kontakt
+- Website: https://navik.ee
+- Web development service: https://navik.ee/veeb/
+- Email: peeter@kargu.ee
+- Phone: +372 50 67 651
+- Location: Tallinn, Estonia
+- Registry code: 17454389
+- LinkedIn: https://www.linkedin.com/company/navik-oü/
 
-- Veebileht: https://navik.ee
-- E-post: peeter@kargu.ee
-- Telefon: +372 50 67 651
-- Asukoht: Tallinn, Eesti
-- Registrikood: 17454389
+## First step
 
-## Esimene samm
+First 30-minute consultation is free. Book: https://navik.ee/kontakt/
 
-Esimene 30-minutiline konsultatsioon on tasuta. Broneeri aeg: https://navik.ee/kontakt/
+## Latest Updates
+
+- April 2026: Launched website development service (Veebitehas) — professional websites from €100
+- April 2026: Portfolio expanded with RS Auto 24 (rsauto24.ee) and 4 other completed projects
+- 2026: Active in IT audit, fractional CIO, and AI consulting for Estonian SMEs
