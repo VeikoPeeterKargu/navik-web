@@ -75,18 +75,27 @@ export default function RootLayout({
       "@type": "Person",
       name: "Veiko-Peeter Kargu",
       jobTitle: "Sõltumatu Digijuht & IT-audiitor",
+      url: "https://kargu.ee",
     },
+    telephone: "+372 50 67 651",
+    email: "peeter@kargu.ee",
+    taxID: "17454389",
+    foundingDate: "2024",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Tallinn",
       addressCountry: "EE",
     },
     areaServed: "EE",
+    sameAs: [
+      "https://www.linkedin.com/company/navik-o%C3%BC/",
+    ],
     serviceType: [
       "IT-otsuste Audit",
       "Fractional CIO",
       "Sõltumatu Digijuht",
       "AI Automatiseerimine",
+      "Kodulehe loomine",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -98,7 +107,7 @@ export default function RootLayout({
             "@type": "Service",
             name: "Vale IT-otsuse Audit",
             description:
-              "2-nädalane sõltumatu analüüs enne uue tarkvara (ERP, CRM, WMS) ostmist.",
+              "2-nädalane sõltumatu analüüs enne uue tarkvara (ERP, CRM, WMS) ostmist. Fikseeritud hind 2 500 €.",
           },
         },
         {
@@ -107,7 +116,7 @@ export default function RootLayout({
             "@type": "Service",
             name: "Sõltumatu Digijuht (Fractional CIO)",
             description:
-              "Osalise koormusega IT-strateegia juhtimine ja IT-partnerite haldus.",
+              "Osalise koormusega IT-strateegia juhtimine ja IT-partnerite haldus. 1 000–2 500 €/kuu.",
           },
         },
         {
@@ -116,7 +125,16 @@ export default function RootLayout({
             "@type": "Service",
             name: "Praktiline AI & Automatiseerimine",
             description:
-              "Rutiinsete käsitöö-protsesside automatiseerimine lihtsate tööriistadega.",
+              "Rutiinsete käsitöö-protsesside automatiseerimine AI-tööriistadega. Ülesseadmine 500–1 500 €.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Professionaalne koduleht",
+            description:
+              "Koduleht alates 100 €, valmis 1–7 päevaga. PageSpeed 95+, mobiilisõbralik, SEO-optimeeritud.",
           },
         },
       ],
