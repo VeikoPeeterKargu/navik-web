@@ -31,7 +31,7 @@ export default function PrivaatsuspoliitikaPage() {
             <h2 className="text-2xl font-semibold mb-4 text-[#1A1A18]">1. Vastutav töötleja</h2>
             <ul className="list-disc pl-5 space-y-2">
               <li><strong>Ärinimi:</strong> NAVIK OÜ</li>
-              <li><strong>Registrikood:</strong> 16932057</li>
+              <li><strong>Registrikood:</strong> 17454389</li>
               <li><strong>E-post:</strong> peeter@kargu.ee</li>
             </ul>
           </section>
