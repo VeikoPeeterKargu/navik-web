@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         description: 'IT-juht haldab servereid. Digijuht haldab äri ja tehnoloogia piiriala.',
         url: 'https://navik.ee/blogi/digijuht-vs-it-juht',
         type: 'article',
-        publishedTime: '2026-04-15T00:00:00.000Z',
+        publishedTime: '2026-04-05T00:00:00.000Z',
         authors: ['Veiko-Peeter Kargu'],
     },
 };
@@ -20,8 +20,8 @@ export default function DigijuhtVsItJuhtPage() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Miks su ettevõte vajab digijuhti, mitte IT-juhti",
-        "datePublished": "2026-04-15",
-        "dateModified": "2026-04-15",
+        "datePublished": "2026-04-05",
+        "dateModified": "2026-04-05",
         "author": { "@type": "Person", "name": "Veiko-Peeter Kargu", "url": "https://kargu.ee" },
         "publisher": { "@type": "Organization", "name": "Navik OÜ", "url": "https://navik.ee" },
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://navik.ee/blogi/digijuht-vs-it-juht" },
@@ -55,7 +55,7 @@ export default function DigijuhtVsItJuhtPage() {
                     </p>
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mt-4">
                         <span>Veiko-Peeter Kargu</span><span>·</span>
-                        <time dateTime="2026-04-15">15. aprill 2026</time>
+                        <time dateTime="2026-04-05">5. aprill 2026</time>
                     </div>
                 </header>
 

@@ -19,7 +19,7 @@ const articles = [
         slug: 'digijuht-vs-it-juht',
         title: 'Miks su ettevõte vajab digijuhti, mitte IT-juhti',
         description: 'IT-juht haldab servereid. Digijuht haldab äri ja tehnoloogia piiriala. Miks osalise ajaga digijuht on VKE-le mõistlikum kui täiskohaga IT-inimene.',
-        date: '2026-04-15',
+        date: '2026-04-05',
         readTime: '6 min',
         tag: 'Digijuhtimine',
     },
