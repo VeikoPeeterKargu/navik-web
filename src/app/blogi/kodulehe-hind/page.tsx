@@ -85,6 +85,14 @@ export default function KoduleheHindPage() {
                     "@type": "Answer",
                     "text": "See küsimus määrab kogu lehe arhitektuuri. Müügileht vajab tugevaid CTA-sid ja sotsiaalseid tõendeid. Usalduslehe fookus on portfooliol ja referentsidel. Kontaktileht peab tegema ühenduse võtmise maksimaalselt lihtsaks."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Kas Wix või Squarespace pole tasuta alternatiiv?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Wixi tasuta versioonis on sinu-nimi.wixsite.com domeen, Wixi reklaam lehel, aeglane laadimisaeg ja piiratud SEO. Tasuline Wix maksab 17–45 €/kuus (204–540 €/aastas) ja sa ei saa isegi lähtekoodi. Tellitud leht alates 100 € on ühekordne kulu, ilma kuumakseta, täieliku SEO-ga ja lähtekoodi omandiõigusega."
+                }
             }
         ]
     };
@@ -347,6 +355,39 @@ export default function KoduleheHindPage() {
                         </div>
                     </section>
 
+                    {/* Wix/Squarespace comparison */}
+                    <section>
+                        <h2 className="text-2xl font-bold mb-4 text-foreground">Aga kas Wix või Squarespace pole tasuta?</h2>
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                            Aus vastus: <strong className="text-foreground">jah, sa saad Wixis „kodulehe“ teha tasuta.</strong> Aga tasuta versioonil on häda:
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div className="p-5 rounded-xl bg-card border border-border">
+                                <h3 className="font-bold text-foreground mb-2">Wix/Squarespace tasuta</h3>
+                                <ul className="space-y-2 text-sm text-muted-foreground">
+                                    <li className="flex items-start gap-2"><span className="text-red-400 shrink-0">✗</span> Domeeni asemel <code>sinu-nimi.wixsite.com</code></li>
+                                    <li className="flex items-start gap-2"><span className="text-red-400 shrink-0">✗</span> Wixi reklaam ja logo sinu lehel</li>
+                                    <li className="flex items-start gap-2"><span className="text-red-400 shrink-0">✗</span> Aeglane laadimisaeg (3–5 sek)</li>
+                                    <li className="flex items-start gap-2"><span className="text-red-400 shrink-0">✗</span> Piiratud SEO kontroll</li>
+                                    <li className="flex items-start gap-2"><span className="text-red-400 shrink-0">✗</span> Platvormile lukustatud</li>
+                                </ul>
+                            </div>
+                            <div className="p-5 rounded-xl bg-primary/5 border border-primary/20">
+                                <h3 className="font-bold text-primary mb-2">Tellitud leht (AI + ekspert)</h3>
+                                <ul className="space-y-2 text-sm text-muted-foreground">
+                                    <li className="flex items-start gap-2"><span className="text-green-400 shrink-0">✓</span> Sinu oma domeen (ettevõte.ee)</li>
+                                    <li className="flex items-start gap-2"><span className="text-green-400 shrink-0">✓</span> Puhas bränd, 0 võõrast reklaami</li>
+                                    <li className="flex items-start gap-2"><span className="text-green-400 shrink-0">✓</span> Laadimisaeg alla 1 sekundi</li>
+                                    <li className="flex items-start gap-2"><span className="text-green-400 shrink-0">✓</span> Täielik SEO + schema markup</li>
+                                    <li className="flex items-start gap-2"><span className="text-green-400 shrink-0">✓</span> Lähtekood on sinu oma</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p className="text-muted-foreground leading-relaxed">
+                            Wixi tasuline plaan maksab 17–45 €/kuus. Aastaga on see <strong className="text-foreground">204–540 €</strong> — ja sa ei saa isegi lähtekoodi. Tellitud leht alates 100 € on <strong className="text-foreground">ühekordne kulu, ilma kuumakseta.</strong>
+                        </p>
+                    </section>
+
                     {/* Section 5 — FAQ with schema */}
                     <section>
                         <h2 className="text-2xl font-bold mb-4 text-foreground">Korduma kippuvad küsimused</h2>
@@ -396,7 +437,7 @@ export default function KoduleheHindPage() {
                             Professionaalne koduleht alates 100 € — valmis 3–7 päevaga. Google PageSpeed 95+, mobiilisõbralik, GDPR-compliant.
                         </p>
                         <p className="text-sm text-primary font-semibold mb-6">
-                            📅 Aprillis on veel 2 vaba kohta — broneeri oma aeg enne kui järjekord pikeneb.
+                            ⚡ RS Auto leht valmis 1 päevaga. Sinu oma võib olla järgmine.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link
