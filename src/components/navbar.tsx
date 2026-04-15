@@ -21,6 +21,7 @@ const LEFT_NAV = [
 ];
 const RIGHT_NAV = [
   { name: 'Veeb', href: 'https://navik.ee/veeb', external: true },
+  { name: 'Blogi', href: '/blogi' },
   { name: 'Kogemus', href: '/#kogemus' },
   { name: 'Kontakt', href: '/#footer-contact' },
 ];
