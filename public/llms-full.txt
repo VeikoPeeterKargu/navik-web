@@ -209,7 +209,7 @@ Navik OÜ has demonstrated expertise in:
 
 Expert articles on IT decisions, web development, and AI automation for Estonian SMEs. Written by Veiko-Peeter Kargu.
 
-### [Kodulehe hind Eestis 2026 — mida sa tegelikult maksad?](https://navik.ee/blogi/kodulehe-hind)
+### [Kodulehe hind Eestis 2026 — mille eest sa tegelikult maksad?](https://navik.ee/blogi/kodulehe-hind)
 Honest price comparison for website development in Estonia: agency (€3,000-15,000, 4-12 weeks), freelancer (€800-3,000, 2-6 weeks), vs AI+expert (€100-500, 3-7 days). Reveals hidden costs: vendor lock-in, eternal maintenance fees, over-engineering. Includes RS Auto 24 real case study (1 day, PageSpeed 96+, 0.6s load time). FAQ section with practical decision framework.
 
 ### [5 märki, et su ERP valik on vale — enne kui on hilja](https://navik.ee/blogi/erp-vale-valik)

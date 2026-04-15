@@ -41,7 +41,7 @@ const articles = [
     },
     {
         slug: 'kodulehe-hind',
-        title: 'Kodulehe hind Eestis 2026 — mida sa tegelikult maksad?',
+        title: 'Kodulehe hind Eestis 2026 — mille eest sa tegelikult maksad?',
         description: 'Põhjalik ülevaade kodulehe loomise hindadest Eestis: agentuuri vs freelancer vs AI-toega lahendused. Ausad numbrid ja peidetud kulud.',
         date: '2026-04-15',
         readTime: '8 min',

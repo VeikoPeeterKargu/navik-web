@@ -2,13 +2,13 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Kodulehe hind Eestis 2026 — mida sa tegelikult maksad? | Navik',
+    title: 'Kodulehe hind Eestis 2026 — mille eest sa tegelikult maksad? | Navik',
     description: 'Põhjalik ülevaade kodulehe loomise hindadest Eestis: agentuur (3000-15000€), freelancer (800-3000€) vs AI-toega lahendus (100-500€). Ausad numbrid, peidetud kulud ja praktiline nõuanne.',
     alternates: {
         canonical: 'https://navik.ee/blogi/kodulehe-hind',
     },
     openGraph: {
-        title: 'Kodulehe hind Eestis 2026 — mida sa tegelikult maksad?',
+        title: 'Kodulehe hind Eestis 2026 — mille eest sa tegelikult maksad?',
         description: 'Agentuur vs freelancer vs AI-lahendus. Ausad numbrid, peidetud kulud ja praktiline nõuanne.',
         url: 'https://navik.ee/blogi/kodulehe-hind',
         type: 'article',
@@ -21,7 +21,7 @@ export default function KoduleheHindPage() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Kodulehe hind Eestis 2026 — mida sa tegelikult maksad?",
+        "headline": "Kodulehe hind Eestis 2026 — mille eest sa tegelikult maksad?",
         "description": "Põhjalik ülevaade kodulehe loomise hindadest Eestis: agentuur, freelancer ja AI-toega lahendused.",
         "datePublished": "2026-04-15",
         "dateModified": "2026-04-15",
@@ -157,7 +157,7 @@ export default function KoduleheHindPage() {
                     <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
                         Kodulehe hind Eestis 2026 —{' '}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-400">
-                            mida sa tegelikult maksad?
+                            mille eest sa tegelikult maksad?
                         </span>
                     </h1>
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
