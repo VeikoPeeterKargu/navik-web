@@ -91,7 +91,7 @@ export default function DigijuhtVsItJuhtPage() {
                                     <tr className="border-b border-border/50">
                                         <td className="py-3 pr-4 font-medium text-foreground">Müüjale vastukaalu</td>
                                         <td className="py-3 pr-4">Võimalik huvide konflikt</td>
-                                        <td className="py-3 text-primary">100% sõltumatu, ei müü tarkvara</td>
+                                        <td className="py-3 text-primary">Ei esinda ühtegi tarkvaramüüjat</td>
                                     </tr>
                                     <tr className="border-b border-border/50">
                                         <td className="py-3 pr-4 font-medium text-foreground">Kulu (VKE-le)</td>
@@ -136,6 +136,21 @@ export default function DigijuhtVsItJuhtPage() {
                         </ul>
                     </section>
 
+                    {/* Real case study */}
+                    <section className="p-6 rounded-xl bg-card border border-primary/20 relative overflow-hidden">
+                        <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
+                        <div className="pl-4">
+                            <p className="text-sm font-semibold tracking-wider uppercase text-primary mb-3">Päriselt juhtunud</p>
+                            <h2 className="text-xl font-bold mb-3 text-foreground">Tegevjuht, kes tegi kõik ise</h2>
+                            <p className="text-muted-foreground leading-relaxed mb-3">
+                                Ettevõte kasvas 15 töötajani, aga IT-juhti polnud. Tegevjuht valis ise tarkvara, rääkis müüjatega, lahendas probleeme. Aga kuna IT polnud tema põhitöö, jäid otsused venima — <strong className="text-foreground">mitte nädalaid, vaid aastaid.</strong> Tarkvara, mis oleks pidanud vahetuma 2022, oli 2025 endiselt kasutusel. Konkurendid liikusid edasi.
+                            </p>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Osalise ajaga digijuht tuli 2 päeva nädalas ja esimese kuuga oli selge: mis vajab kohe otsust, mis võib oodata, ja mis on üleinvesteering. <strong className="text-foreground">Tegevjuht sai tagasi selle, mida ta tegelikult müüs — oma aja.</strong>
+                            </p>
+                        </div>
+                    </section>
+
                     {/* What fractional CIO does */}
                     <section>
                         <h2 className="text-2xl font-bold mb-4 text-foreground">Mis osalise ajaga digijuht tegelikult teeb?</h2>
@@ -178,7 +193,7 @@ export default function DigijuhtVsItJuhtPage() {
                                 </div>
                             </div>
                             <p className="text-center text-sm text-muted-foreground mt-4">
-                                Sääst: <strong className="text-primary">30 000–48 000 €/aasta</strong> — ja saad kogenuma inimese.
+                                Sääst: <strong className="text-primary">30 000–48 000 €/aasta</strong> — ja saad valdkondliku kogemuse, mida ühe ettevõtte IT-juht ei kogu.
                             </p>
                         </div>
                     </section>
