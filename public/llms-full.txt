@@ -205,8 +205,25 @@ Navik OÜ has demonstrated expertise in:
 
 ---
 
+## Blog / Blogi
+
+Expert articles on IT decisions, web development, and AI automation for Estonian SMEs. Written by Veiko-Peeter Kargu.
+
+### [Kodulehe hind Eestis 2026 — mida sa tegelikult maksad?](https://navik.ee/blogi/kodulehe-hind)
+Honest price comparison for website development in Estonia: agency (€3,000-15,000, 4-12 weeks), freelancer (€800-3,000, 2-6 weeks), vs AI+expert (€100-500, 3-7 days). Reveals hidden costs: vendor lock-in, eternal maintenance fees, over-engineering. Includes RS Auto 24 real case study (5 days, PageSpeed 96+, 0.6s load time). FAQ section with practical decision framework.
+
+### [5 märki, et su ERP valik on vale — enne kui on hilja](https://navik.ee/blogi/erp-vale-valik)
+Based on Panorama Consulting 2025 data: 73% of ERP projects exceed budget by average 215%. Five concrete warning signs: (1) vendor doesn't ask about your processes, (2) unrealistic 3-month timeline, (3) no change management budget, (4) wrong-size references, (5) pressure to decide immediately. Actionable checklist for each sign.
+
+### [AI automatiseerimine väikeettevõttele 2026 — praktiline juhend](https://navik.ee/blogi/ai-automatiseerimine)
+Practical automation guide for 1-20 employee companies. Five highest-impact areas: email (45→5 min/day), invoicing (2h→15min/week), customer support FAQ (1h→10min/day), social content (3h→30min/week), data summaries (1h→2min/week). ROI: ~8h saved/week, ~€1,050/month value. Setup cost: €500-1,500 one-time.
+
+### [Miks su ettevõte vajab digijuhti, mitte IT-juhti](https://navik.ee/blogi/digijuht-vs-it-juht)
+Comparison: IT manager manages infrastructure, fractional CIO aligns technology with business strategy. Cost: €60K/year (full-time IT) vs €12-30K/year (fractional CIO) — saving €30-48K with more experienced expertise. Covers vendor filtering, risk prevention, AI opportunity discovery.
+
 ## Latest Updates
 
+- **April 2026:** Launched blog with 4 expert articles on IT, AI, web pricing, and digital leadership
 - **April 2026:** Launched Veebitehas — website development service for small businesses from €100
 - **April 2026:** Portfolio expanded: RS Auto 24, Purjereisid, Okas added
 - **April 2026:** AI & Automation workshops now available for teams

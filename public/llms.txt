@@ -40,8 +40,18 @@ Veiko-Peeter Kargu has sat on every side of the IT negotiation table:
 
 First 30-minute consultation is free. Book: https://navik.ee/kontakt/
 
+## Blog / Blogi
+
+Practical articles on IT decisions, web development, and AI automation for Estonian SMEs:
+
+- [Kodulehe hind Eestis 2026](https://navik.ee/blogi/kodulehe-hind) — Honest comparison: agency (€3,000-15,000) vs freelancer (€800-3,000) vs AI+expert (€100-500). Hidden costs revealed. Real client case study.
+- [5 märki, et su ERP valik on vale](https://navik.ee/blogi/erp-vale-valik) — 73% of ERP projects exceed budget by 215%. Five warning signs to check before signing.
+- [AI automatiseerimine väikeettevõttele 2026](https://navik.ee/blogi/ai-automatiseerimine) — Save 8+ hours/week with practical AI automation. ROI calculation and specific tools for email, invoicing, content, support.
+- [Miks su ettevõte vajab digijuhti, mitte IT-juhti](https://navik.ee/blogi/digijuht-vs-it-juht) — Fractional CIO vs full-time IT manager: €12K vs €60K/year with more strategic impact.
+
 ## Latest Updates
 
+- April 2026: Launched blog with 4 expert articles on IT audit, AI, web pricing, and digital leadership
 - April 2026: Launched website development service (Veebitehas) — professional websites from €100
 - April 2026: Portfolio expanded with RS Auto 24 (rsauto24.ee) and 4 other completed projects
 - 2026: Active in IT audit, fractional CIO, and AI consulting for Estonian SMEs

@@ -74,7 +74,7 @@ export default function AiAutomatiseeriminePage() {
                             Unusta robotid ja tehisintellekt filmidest. Praktiline AI automatiseerimine tähendab lihtsalt seda: <strong className="text-foreground">masin teeb igava töö ära, sina teed otsused.</strong>
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            See ei tähenda töötajate asendamist. See tähendab, et sinu parim müügimees ei pea enam pool päeva Excelis numbreid kokku lööma.
+                            See ei tähenda töötajate asendamist. See tähendab, et sinu parim müügimees ei pea enam pool päeva Excelis numbreid kokku lööma. Ja äraspidi — kui sul on <Link href="/blogi/erp-vale-valik" className="text-primary hover:underline">vale tarkvara</Link>, ei aita ka AI. Alusta alati aluspõhjast.
                         </p>
                     </section>
 
@@ -156,7 +156,7 @@ export default function AiAutomatiseeriminePage() {
                                 <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-bold shrink-0">3</span>
                                 <div>
                                     <h3 className="font-bold text-foreground">Mõõda</h3>
-                                    <p className="text-muted-foreground text-sm">Kui see säästad 2+ tundi nädalas — tee järgmine. Kui mitte — sõnasta probleem ümber.</p>
+                                    <p className="text-muted-foreground text-sm">Kui see säästad 2+ tundi nädalas — tee järgmine. Kui mitte — sõnasta probleem ümber. Vajad kedagi, kes seda protsessi juhiks? Loe, miks <Link href="/blogi/digijuht-vs-it-juht" className="text-primary hover:underline">digijuht on parem valik kui IT-juht</Link>.</p>
                                 </div>
                             </div>
                         </div>
@@ -180,6 +180,17 @@ export default function AiAutomatiseeriminePage() {
                 </div>
 
                 <div className="mt-12 pt-6 border-t border-border">
+                    <p className="text-sm font-semibold text-foreground mb-4">Loe ka:</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <Link href="/blogi/erp-vale-valik" className="p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors text-sm">
+                            <span className="text-primary font-medium">5 märki, et su ERP valik on vale</span>
+                            <p className="text-muted-foreground text-xs mt-1">IT-audit · 10 min</p>
+                        </Link>
+                        <Link href="/blogi/kodulehe-hind" className="p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors text-sm">
+                            <span className="text-primary font-medium">Kodulehe hind Eestis 2026</span>
+                            <p className="text-muted-foreground text-xs mt-1">Veebiarendus · 8 min</p>
+                        </Link>
+                    </div>
                     <Link href="/blogi" className="text-sm text-muted-foreground hover:text-primary transition-colors">← Tagasi blogisse</Link>
                 </div>
             </article>

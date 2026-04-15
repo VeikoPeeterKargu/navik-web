@@ -123,7 +123,7 @@ export default function DigijuhtVsItJuhtPage() {
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">→</span>
-                                <span>Oled valmis tegema <strong className="text-foreground">suurt IT-investeeringut</strong> (ERP, CRM, WMS) ja vajad sõltumatut pilku</span>
+                                <span>Oled valmis tegema <strong className="text-foreground">suurt IT-investeeringut</strong> (ERP, CRM, WMS) ja vajad sõltumatut pilku — loe ka <Link href="/blogi/erp-vale-valik" className="text-primary hover:underline">5 hoiatusmärki vale ERP valiku kohta</Link></span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">→</span>
@@ -154,7 +154,7 @@ export default function DigijuhtVsItJuhtPage() {
                             </div>
                             <div className="p-5 rounded-xl bg-card border border-border">
                                 <h3 className="font-bold text-foreground mb-2">🤖 AI võimaluste avastamine</h3>
-                                <p className="text-sm text-muted-foreground">Testin uusi tööriistu sinu protsessidel. Kui töötab — juurutan. Kui ei — säästsin sulle aega ja raha.</p>
+                                <p className="text-sm text-muted-foreground">Testin uusi tööriistu sinu protsessidel. Kui töötab — juurutan. Kui ei — säästsin sulle aega ja raha. Loe konkreetseid näiteid meie <Link href="/blogi/ai-automatiseerimine" className="text-primary hover:underline">AI automatiseerimise juhendist</Link>.</p>
                             </div>
                         </div>
                     </section>
@@ -201,6 +201,17 @@ export default function DigijuhtVsItJuhtPage() {
                 </div>
 
                 <div className="mt-12 pt-6 border-t border-border">
+                    <p className="text-sm font-semibold text-foreground mb-4">Loe ka:</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <Link href="/blogi/erp-vale-valik" className="p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors text-sm">
+                            <span className="text-primary font-medium">5 märki, et su ERP valik on vale</span>
+                            <p className="text-muted-foreground text-xs mt-1">IT-audit · 10 min</p>
+                        </Link>
+                        <Link href="/blogi/ai-automatiseerimine" className="p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors text-sm">
+                            <span className="text-primary font-medium">AI automatiseerimine väikeettevõttele</span>
+                            <p className="text-muted-foreground text-xs mt-1">AI · 7 min</p>
+                        </Link>
+                    </div>
                     <Link href="/blogi" className="text-sm text-muted-foreground hover:text-primary transition-colors">← Tagasi blogisse</Link>
                 </div>
             </article>

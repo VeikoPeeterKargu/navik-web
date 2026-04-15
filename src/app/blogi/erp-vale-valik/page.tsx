@@ -151,10 +151,10 @@ export default function ErpValeValikPage() {
                     <section>
                         <h2 className="text-2xl font-bold mb-4 text-foreground">Kokkuvõte: üks lihtsus enne suurt otsust</h2>
                         <p className="text-muted-foreground leading-relaxed mb-4">
-                            ERP valik on üks kallimaid otsuseid, mida väikeettevõte teeb. Vale valik ei maksa ainult raha — see maksab aega, meeskonna motivatsiooni ja konkurentsivõimet.
+                            ERP valik on üks kallimaid otsuseid, mida väikeettevõte teeb. Vale valik ei maksa ainult raha — see maksab aega, meeskonna motivatsiooni ja konkurentsivõimet. Kui sul pole ettevõttes kedagi, kes seda otsust juhiks, loe meie artiklit <Link href="/blogi/digijuht-vs-it-juht" className="text-primary hover:underline">digijuhist vs IT-juhist</Link>.
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            <strong className="text-foreground">Üks sõltumatu pilk enne lepingut</strong> — see on kõik, mis vaja. Mitte teine müügikõne. Mitte veel üks demo. Vaid aus hinnang: osta, ära osta, või oota.
+                            <strong className="text-foreground">Üks sõltumatu pilk enne lepingut</strong> — see on kõik, mis vaja. Mitte teine müügikõne. Mitte veel üks demo. Vaid aus hinnang: osta, ära osta, või oota. Ja pärast otsust — <Link href="/blogi/ai-automatiseerimine" className="text-primary hover:underline">automatiseeri korduvad protsessid AI-ga</Link>, et investeering end kiiremini ära tasuks.
                         </p>
                     </section>
 
@@ -175,10 +175,23 @@ export default function ErpValeValikPage() {
                     </section>
                 </div>
 
+                {/* Related articles */}
                 <div className="mt-12 pt-6 border-t border-border">
+                    <p className="text-sm font-semibold text-foreground mb-4">Loe ka:</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <Link href="/blogi/digijuht-vs-it-juht" className="p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors text-sm">
+                            <span className="text-primary font-medium">Miks su ettevõte vajab digijuhti?</span>
+                            <p className="text-muted-foreground text-xs mt-1">Digijuhtimine · 6 min</p>
+                        </Link>
+                        <Link href="/blogi/ai-automatiseerimine" className="p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors text-sm">
+                            <span className="text-primary font-medium">AI automatiseerimine väikeettevõttele</span>
+                            <p className="text-muted-foreground text-xs mt-1">AI · 7 min</p>
+                        </Link>
+                    </div>
                     <Link href="/blogi" className="text-sm text-muted-foreground hover:text-primary transition-colors">← Tagasi blogisse</Link>
                 </div>
             </article>
         </main>
     );
 }
+
