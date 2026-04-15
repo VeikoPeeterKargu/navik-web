@@ -238,8 +238,8 @@ export default function KoduleheHindPage() {
                                 </p>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                                     <div className="text-center">
-                                        <p className="text-2xl font-bold text-primary">5</p>
-                                        <p className="text-xs text-muted-foreground">päeva valmis</p>
+                                        <p className="text-2xl font-bold text-primary">1</p>
+                                        <p className="text-xs text-muted-foreground">päevaga valmis</p>
                                     </div>
                                     <div className="text-center">
                                         <p className="text-2xl font-bold text-primary">96+</p>
@@ -295,7 +295,7 @@ export default function KoduleheHindPage() {
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">✓</span>
-                                <span><strong className="text-foreground">Kiirus:</strong> 3–7 päeva, mitte 3 kuud. RS Auto leht oli valmis 5 päevaga.</span>
+                                <span><strong className="text-foreground">Kiirus:</strong> 3–7 päeva, mitte 3 kuud. RS Auto leht oli valmis 1 päevaga.</span>
                             </li>
                         </ul>
                         <p className="text-muted-foreground leading-relaxed mt-4">
