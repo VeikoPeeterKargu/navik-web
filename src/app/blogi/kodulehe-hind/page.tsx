@@ -236,13 +236,13 @@ export default function KoduleheHindPage() {
 
                     {/* NEW: Case Study */}
                     <section>
-                        <h2 className="text-2xl font-bold mb-4 text-foreground">Reaalne näide: RS Auto</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-foreground">Reaalne näide: Rsauto24</h2>
                         <div className="p-6 rounded-xl bg-card border border-primary/20 relative overflow-hidden">
                             <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
                             <div className="pl-4">
                                 <p className="text-sm font-semibold tracking-wider uppercase text-primary mb-3">Kliendilugu</p>
                                 <p className="text-muted-foreground leading-relaxed mb-4">
-                                    <a href="https://rsauto24.ee" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">RS Auto 24</a> — autohoolduse ettevõte, kes vajas professionaalset kodulehte teenuste ja hinnakirjaga. Eelmine leht oli vananenud ja mobiilis kasutamatu.
+                                    <a href="https://rsauto24.ee" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">Rsauto24</a> — autohoolduse ettevõte, kes vajas professionaalset kodulehte teenuste ja hinnakirjaga. Eelmine leht oli vananenud ja mobiilis kasutamatu.
                                 </p>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                                     <div className="text-center">
@@ -274,7 +274,7 @@ export default function KoduleheHindPage() {
                                         <span className="text-primary font-semibold">Raul</span>
                                         <span className="text-muted-foreground">·</span>
                                         <a href="https://rsauto24.ee" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                                            RS Auto 24
+                                            Rsauto24
                                         </a>
                                     </footer>
                                 </blockquote>
@@ -303,7 +303,7 @@ export default function KoduleheHindPage() {
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">✓</span>
-                                <span><strong className="text-foreground">Kiirus:</strong> 3–7 päeva, mitte 3 kuud. RS Auto leht oli valmis 1 päevaga.</span>
+                                <span><strong className="text-foreground">Kiirus:</strong> 3–7 päeva, mitte 3 kuud. Rsauto24 leht oli valmis 1 päevaga.</span>
                             </li>
                         </ul>
                         <p className="text-muted-foreground leading-relaxed mt-4">
@@ -437,7 +437,7 @@ export default function KoduleheHindPage() {
                             Professionaalne koduleht alates 100 € — valmis 3–7 päevaga. Google PageSpeed 95+, mobiilisõbralik, GDPR-compliant.
                         </p>
                         <p className="text-sm text-primary font-semibold mb-6">
-                            ⚡ RS Auto leht valmis 1 päevaga. Sinu oma võib olla järgmine.
+                            ⚡ Rsauto24 leht valmis 1 päevaga. Sinu oma võib olla järgmine.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link
