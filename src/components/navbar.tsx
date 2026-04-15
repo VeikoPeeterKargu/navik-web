@@ -114,7 +114,12 @@ export function Navbar() {
                 {item.href === '/veeb' ? (
                   <a
                     href={item.href}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setMobileOpen(false);
+                      // Force hard navigation — bypass Next.js App Router RSC
+                      window.location.href = item.href;
+                    }}
                     className={cn(
                       'block text-2xl font-light py-4 border-b border-[#2A2820] transition-colors',
                       pathname === item.href ? 'text-[#C9A027]' : 'text-[#F8F5EE] hover:text-[#C9A027]'
@@ -162,13 +167,34 @@ export function Navbar() {
 
 function NavLink({ item, pathname }: { item: { name: string; href: string }; pathname: string }) {
   const isActive = pathname === item.href;
-  // /veeb on staatiline HTML (public/veeb/), vajab täislehe navigatsiooni
+  // /veeb on staatiline HTML (public/veeb/), vajab täislehe navigatsiooni.
+  // Next.js 16 App Router RSC päring /veeb aadressile tagastab 404,
+  // sest src/app/veeb/page.tsx ei eksisteeri. Seetõttu kasutame
+  // window.location.href mis möödub kliendipoolsest routerist täielikult.
   const isStatic = item.href === '/veeb';
-  const Tag = isStatic ? 'a' : Link;
-  const linkProps = isStatic ? { href: item.href } : { href: item.href };
+
+  if (isStatic) {
+    return (
+      <a
+        href={item.href}
+        onClick={(e) => {
+          e.preventDefault();
+          window.location.href = item.href;
+        }}
+        className={cn(
+          'relative text-[1.07rem] tracking-[0.1em] transition-colors pb-0.5',
+          isActive ? 'text-[#C9A027]' : 'text-[#F8F5EE]/85 hover:text-[#F8F5EE]'
+        )}
+        style={{ fontFamily: 'var(--font-body)' }}
+      >
+        {item.name}
+      </a>
+    );
+  }
+
   return (
-    <Tag
-      {...linkProps}
+    <Link
+      href={item.href}
       className={cn(
         'relative text-[1.07rem] tracking-[0.1em] transition-colors pb-0.5',
         isActive ? 'text-[#C9A027]' : 'text-[#F8F5EE]/85 hover:text-[#F8F5EE]'
@@ -184,6 +210,6 @@ function NavLink({ item, pathname }: { item: { name: string; href: string }; pat
           transition={{ type: 'spring', stiffness: 350, damping: 32 }}
         />
       )}
-    </Tag>
+    </Link>
   );
 }
