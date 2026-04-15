@@ -122,9 +122,9 @@ This quadruple experience means: I know how IT vendors think, how large buyers n
 **Portfolio:**
 - [rsauto24.ee](https://rsauto24.ee) — Auto repair service
 - [kargu.ee](https://kargu.ee) — Personal portfolio
-- [kargu.ee/purjereisid](https://www.kargu.ee/purjereisid/) — Sailing trips & catamaran rental
+- [kargu.ee/purjereisid](https://kargu.ee/purjereisid/) — Sailing trips & catamaran rental
 - [navik.ee](https://navik.ee) — IT consulting (this site)
-- [kargu.ee/okas](https://www.kargu.ee/okas/) — Real estate / art gallery
+- [kargu.ee/okas](https://kargu.ee/okas/) — Art collection (Evald Okas)
 
 **Why €100 and not €1,000+?**
 AI tools handle the heavy lifting — layout generation, code optimization, responsive design. I focus on strategy, structure, and client communication. The savings go directly to the client.
@@ -211,3 +211,8 @@ Navik OÜ has demonstrated expertise in:
 - **April 2026:** Portfolio expanded: RS Auto 24, Purjereisid, Okas added
 - **April 2026:** AI & Automation workshops now available for teams
 - **2026 Q1-Q2:** Active in IT audit and fractional CIO services across Estonia
+
+## Freshness
+
+- Content verified: April 2026
+- Next review: July 2026

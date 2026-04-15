@@ -1,5 +1,7 @@
 # Navik OÜ
 
+> Last verified: April 2026
+
 > Navik OÜ is an Estonian IT consulting and web development company based in Tallinn. We provide independent IT decision audits, fractional CIO services, AI automation consulting, and affordable AI-powered website development for small businesses. Founded by Veiko-Peeter Kargu. Registry code: 17454389.
 
 ## Täisversioon / Full version
@@ -43,3 +45,8 @@ First 30-minute consultation is free. Book: https://navik.ee/kontakt/
 - April 2026: Launched website development service (Veebitehas) — professional websites from €100
 - April 2026: Portfolio expanded with RS Auto 24 (rsauto24.ee) and 4 other completed projects
 - 2026: Active in IT audit, fractional CIO, and AI consulting for Estonian SMEs
+
+## Freshness
+
+- Content verified: April 2026
+- Next review: July 2026
