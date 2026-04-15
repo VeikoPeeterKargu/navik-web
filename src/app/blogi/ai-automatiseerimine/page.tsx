@@ -78,6 +78,14 @@ export default function AiAutomatiseeriminePage() {
                         </p>
                     </section>
 
+                    {/* Target audience example */}
+                    <section className="p-6 rounded-xl bg-primary/5 border border-primary/20">
+                        <h2 className="text-lg font-bold mb-3 text-foreground">Näide: raamatupidamisbüroo, 5 töötajat</h2>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                            Igakuine aruandlus võtab 3 päeva. E-kirjadele vastamine ja dokumentide kogumine — veel 1 päev. AI-ga genereerib aruande mustandi automaatselt, kliendi meeldetuletused lähevad ise, ja standardvastused on valmis enne kui sina kohvi keedad. <strong className="text-foreground">Tulemus: 3 päevast saab 1.</strong>
+                        </p>
+                    </section>
+
                     {/* Use cases */}
                     <section>
                         <h2 className="text-2xl font-bold mb-6 text-foreground">5 kõige mõjusamat kohta</h2>
@@ -130,6 +138,9 @@ export default function AiAutomatiseeriminePage() {
                             </div>
                             <p className="text-muted-foreground text-sm mt-4 text-center">
                                 Ülesseadmine: 500–1 500 € ühekordselt. Tasuvusaeg: 1–2 kuud.
+                            </p>
+                            <p className="text-xs text-muted-foreground/60 mt-2 text-center italic">
+                                * Hinnangulised numbrid tüüpilise 5–15 töötajaga teenusettevõtte põhjal. Tegelik sääst sõltub sinu protsessidest.
                             </p>
                         </div>
                     </section>
