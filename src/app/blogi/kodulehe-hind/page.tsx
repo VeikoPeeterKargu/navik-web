@@ -42,11 +42,62 @@ export default function KoduleheHindPage() {
         "keywords": ["kodulehe hind", "kodulehe tegemine", "veebileht hind", "koduleht Eesti", "veebiarendus hind"]
     };
 
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Mitu lehekülge mul tegelikult vaja on?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Enamik väikeettevõtteid vajab 3–5 lehekülge: avaleht, teenused/tooted, meist ja kontakt. Blogi on lisaväärtus SEO jaoks. Ära lase kellelgi müüa sulle 20-lehelist saiti, kui vajad 4 lehte."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kas mul on vaja sisuhaldust (CMS) või on staatiline leht piisav?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kui sa muudad sisu harvem kui kord kuus, on staatiline leht kiirem, turvalisem ja odavam. CMS (WordPress, Webflow) tasub ennast ära ainult siis, kui lisad regulaarselt blogi- või tootepostitusi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kes hooldab lehte pärast ja kui tihti muudatusi teen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Staatilise lehe hoolduskulu on praktiliselt 0 €. WordPress vajab regulaarseid uuendusi (50–150 €/kuu). Mõtle ette: kui viimati vajasid kodulehe muudatust, siis mis see oli ja kui tihti see juhtub?"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kas mul on vaja e-poodi, broneerimist või kontaktvormi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kontaktivormi saab lisada tasuta (Formspree, Netlify Forms). E-pood vajab spetsiaalset platvormi (Shopify alates 30 €/kuu). Broneerimine käib kolmanda osapoole tööriistaga (Calendly, Cal.com)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Mis on kodulehe peamine eesmärk — müük, usaldus või kontakt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "See küsimus määrab kogu lehe arhitektuuri. Müügileht vajab tugevaid CTA-sid ja sotsiaalseid tõendeid. Usalduslehe fookus on portfooliol ja referentsidel. Kontaktileht peab tegema ühenduse võtmise maksimaalselt lihtsaks."
+                }
+            }
+        ]
+    };
+
     return (
         <main className="flex min-h-screen flex-col items-center justify-start pt-32 pb-16 px-4 md:px-6">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
             />
             <article className="max-w-3xl w-full">
                 {/* Breadcrumb */}
@@ -133,7 +184,7 @@ export default function KoduleheHindPage() {
                         <ul className="space-y-3 text-muted-foreground">
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">⚠️</span>
-                                <span><strong className="text-foreground">Lukustusefekt:</strong> CMS, mille lähtekood on agentuuri peos. Kui lahkud, alustab uus tegija nullist.</span>
+                                <span><strong className="text-foreground">Lukustusefekt:</strong> CMS, mille lähtekood on agentuuri peos. Kui lahkud, alustab uus tegija nullist. Selle probleemi kohta loe ka meie <Link href="/blogi/erp-vale-valik" className="text-primary hover:underline">ERP valikuvigade artiklist</Link> — sama muster kehtib kodulehtede puhul.</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">⚠️</span>
@@ -141,9 +192,44 @@ export default function KoduleheHindPage() {
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">⚠️</span>
-                                <span><strong className="text-foreground">Üle-ehitamine:</strong> Sulle müüakse 50-leheline WordPress, kuigi vajad 3 lehte ja kontaktvormi.</span>
+                                <span><strong className="text-foreground">Üle-ehitamine:</strong> Sulle müüakse 50-leheline WordPress, kuigi vajad 3 lehte ja kontaktvormi. Kas tunned, et IT-partner survestab? <Link href="/audit" className="text-primary hover:underline">Sõltumatu audit</Link> annab selguse.</span>
                             </li>
                         </ul>
+                    </section>
+
+                    {/* NEW: Case Study */}
+                    <section>
+                        <h2 className="text-2xl font-bold mb-4 text-foreground">Reaalne näide: RS Auto</h2>
+                        <div className="p-6 rounded-xl bg-card border border-primary/20 relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
+                            <div className="pl-4">
+                                <p className="text-sm font-semibold tracking-wider uppercase text-primary mb-3">Kliendilugu</p>
+                                <p className="text-muted-foreground leading-relaxed mb-4">
+                                    <strong className="text-foreground">RS Auto</strong> — autohoolduse ettevõte, kes vajas professionaalset kodulehte teenuste ja hinnakirjaga. Eelmine leht oli vananenud ja mobiilis kasutamatu.
+                                </p>
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                                    <div className="text-center">
+                                        <p className="text-2xl font-bold text-primary">5</p>
+                                        <p className="text-xs text-muted-foreground">päeva valmis</p>
+                                    </div>
+                                    <div className="text-center">
+                                        <p className="text-2xl font-bold text-primary">96+</p>
+                                        <p className="text-xs text-muted-foreground">PageSpeed skoor</p>
+                                    </div>
+                                    <div className="text-center">
+                                        <p className="text-2xl font-bold text-primary">0,6s</p>
+                                        <p className="text-xs text-muted-foreground">laadimisaeg</p>
+                                    </div>
+                                    <div className="text-center">
+                                        <p className="text-2xl font-bold text-primary">100%</p>
+                                        <p className="text-xs text-muted-foreground">mobiilisõbralik</p>
+                                    </div>
+                                </div>
+                                <p className="text-muted-foreground text-sm leading-relaxed">
+                                    Tulemus: puhas HTML/CSS leht ilma WordPressita, Google Analytics, GDPR-compliant küpsisebanner, JSON-LD schema ja täielik SEO ülesseadmine — kõik <strong className="text-foreground">murdu sellest, mida agentuur oleks küsinud.</strong>
+                                </p>
+                            </div>
+                        </div>
                     </section>
 
                     {/* Section 3 */}
@@ -159,19 +245,19 @@ export default function KoduleheHindPage() {
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">✓</span>
-                                <span><strong className="text-foreground">Kood:</strong> Puhas, kiire HTML/CSS ilma raskete CMS-deta. Laadib sekundiga.</span>
+                                <span><strong className="text-foreground">Kood:</strong> Puhas, kiire HTML/CSS ilma raskete CMS-deta. <strong className="text-foreground">Google PageSpeed 95+</strong> ja laadimisaeg alla 1 sekundi — mitte 3–5 sekundit nagu keskmisel WordPressi lehel.</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">✓</span>
-                                <span><strong className="text-foreground">SEO:</strong> Schema, meta tagid, mobiilioptimeerimine — kõik on kohe sees.</span>
+                                <span><strong className="text-foreground">SEO:</strong> Schema markup, Open Graph tagid, mobiilioptimeerimine, Consent Mode v2 — kõik on esimesest päevast sees. Loe meie <Link href="/blogi/ai-automatiseerimine" className="text-primary hover:underline">AI automatiseerimise artiklist</Link>, kuidas sama loogika töötab muudes äriprotsessides.</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-primary mt-1 shrink-0">✓</span>
-                                <span><strong className="text-foreground">Kiirus:</strong> 3–7 päeva, mitte 3 kuud.</span>
+                                <span><strong className="text-foreground">Kiirus:</strong> 3–7 päeva, mitte 3 kuud. RS Auto leht oli valmis 5 päevaga.</span>
                             </li>
                         </ul>
                         <p className="text-muted-foreground leading-relaxed mt-4">
-                            See ei tähenda, et AI asendab inimest. <strong className="text-foreground">AI kiirendab tööd, aga strateegia, brändi mõistmine ja kliendi ärist arusaamine nõuab kogemust.</strong> Sellepärast on optimaalne mudel: AI teeb rasket tööd, ekspert juhib protsessi.
+                            See ei tähenda, et AI asendab inimest. <strong className="text-foreground">AI kiirendab tööd, aga strateegia, brändi mõistmine ja kliendi ärist arusaamine nõuab kogemust.</strong> Sellepärast on optimaalne mudel: AI teeb rasket tööd, ekspert juhib protsessi. Kui sa ei ole kindel, millist rolli peaks IT sinu ettevõttes mängima, loe meie artiklit <Link href="/blogi/digijuht-vs-it-juht" className="text-primary hover:underline">digijuhist vs IT-juhist</Link>.
                         </p>
                     </section>
 
@@ -219,28 +305,56 @@ export default function KoduleheHindPage() {
                         </div>
                     </section>
 
-                    {/* Section 5 */}
+                    {/* Section 5 — FAQ with schema */}
                     <section>
-                        <h2 className="text-2xl font-bold mb-4 text-foreground">Praktiline nõuanne</h2>
-                        <div className="p-6 rounded-xl bg-primary/5 border border-primary/20">
-                            <p className="text-foreground leading-relaxed mb-3">
-                                <strong>Enne kui maksad kellegi teise arvamuse eest, küsi endalt:</strong>
-                            </p>
-                            <ol className="space-y-2 text-muted-foreground list-decimal list-inside">
-                                <li>Mitu lehekülge mul tegelikult vaja on?</li>
-                                <li>Kas mul on vaja sisuhaldust (blogi, tooted) või on staatiline leht piisav?</li>
-                                <li>Kes hooldab lehte pärast? Kui tihti muudatusi teen?</li>
-                                <li>Kas mul on vaja e-poodi, broneerimist või kontaktvormi?</li>
-                                <li>Mis on mu lehekülje <em>peamine eesmärk</em> — müük, usaldus, kontakt?</li>
-                            </ol>
+                        <h2 className="text-2xl font-bold mb-4 text-foreground">Korduma kippuvad küsimused</h2>
+                        <div className="space-y-4">
+                            <details className="p-5 rounded-xl bg-card border border-border group" open>
+                                <summary className="font-bold text-foreground cursor-pointer list-none flex justify-between items-center">
+                                    Mitu lehekülge mul tegelikult vaja on?
+                                    <span className="text-primary group-open:rotate-180 transition-transform duration-200">▼</span>
+                                </summary>
+                                <p className="text-muted-foreground mt-3 leading-relaxed">Enamik väikeettevõtteid vajab <strong className="text-foreground">3–5 lehekülge</strong>: avaleht, teenused/tooted, meist ja kontakt. Blogi on lisaväärtus SEO jaoks. Ära lase kellelgi müüa sulle 20-lehelist saiti, kui vajad 4 lehte.</p>
+                            </details>
+                            <details className="p-5 rounded-xl bg-card border border-border group">
+                                <summary className="font-bold text-foreground cursor-pointer list-none flex justify-between items-center">
+                                    Kas mul on vaja sisuhaldust (CMS) või on staatiline leht piisav?
+                                    <span className="text-primary group-open:rotate-180 transition-transform duration-200">▼</span>
+                                </summary>
+                                <p className="text-muted-foreground mt-3 leading-relaxed">Kui sa muudad sisu <strong className="text-foreground">harvem kui kord kuus</strong>, on staatiline leht kiirem, turvalisem ja odavam. CMS (WordPress, Webflow) tasub ennast ära ainult siis, kui lisad regulaarselt blogi- või tootepostitusi.</p>
+                            </details>
+                            <details className="p-5 rounded-xl bg-card border border-border group">
+                                <summary className="font-bold text-foreground cursor-pointer list-none flex justify-between items-center">
+                                    Kes hooldab lehte pärast? Kui tihti muudatusi teen?
+                                    <span className="text-primary group-open:rotate-180 transition-transform duration-200">▼</span>
+                                </summary>
+                                <p className="text-muted-foreground mt-3 leading-relaxed">Staatilise lehe hoolduskulu on <strong className="text-foreground">praktiliselt 0 €</strong>. WordPress vajab regulaarseid uuendusi (50–150 €/kuu). Mõtle ette: kui viimati vajasid kodulehe muudatust, siis mis see oli ja kui tihti see juhtub?</p>
+                            </details>
+                            <details className="p-5 rounded-xl bg-card border border-border group">
+                                <summary className="font-bold text-foreground cursor-pointer list-none flex justify-between items-center">
+                                    Kas mul on vaja e-poodi, broneerimist või kontaktvormi?
+                                    <span className="text-primary group-open:rotate-180 transition-transform duration-200">▼</span>
+                                </summary>
+                                <p className="text-muted-foreground mt-3 leading-relaxed">Kontaktivormi saab lisada <strong className="text-foreground">tasuta</strong> (Formspree, Netlify Forms). E-pood vajab spetsiaalset platvormi (Shopify alates 30 €/kuu). Broneerimine käib kolmanda osapoole tööriistaga (Calendly, Cal.com).</p>
+                            </details>
+                            <details className="p-5 rounded-xl bg-card border border-border group">
+                                <summary className="font-bold text-foreground cursor-pointer list-none flex justify-between items-center">
+                                    Mis on kodulehe peamine eesmärk — müük, usaldus või kontakt?
+                                    <span className="text-primary group-open:rotate-180 transition-transform duration-200">▼</span>
+                                </summary>
+                                <p className="text-muted-foreground mt-3 leading-relaxed">See küsimus määrab kogu lehe arhitektuuri. <strong className="text-foreground">Müügileht</strong> vajab tugevaid CTA-sid ja sotsiaalseid tõendeid. <strong className="text-foreground">Usalduslehe</strong> fookus on portfooliol ja referentsidel. <strong className="text-foreground">Kontaktileht</strong> peab tegema ühenduse võtmise maksimaalselt lihtsaks.</p>
+                            </details>
                         </div>
                     </section>
 
-                    {/* CTA */}
+                    {/* CTA with urgency */}
                     <section className="mt-12 p-8 rounded-2xl bg-card border border-border text-center">
                         <h2 className="text-2xl font-bold mb-4 text-foreground">Vajad kodulehte?</h2>
-                        <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-                            Professionaalne koduleht alates 100 € — valmis 3–7 päevaga. Mobiilisõbralik, kiire, Google&apos;is leitav.
+                        <p className="text-muted-foreground mb-4 max-w-lg mx-auto">
+                            Professionaalne koduleht alates 100 € — valmis 3–7 päevaga. Google PageSpeed 95+, mobiilisõbralik, GDPR-compliant.
+                        </p>
+                        <p className="text-sm text-primary font-semibold mb-6">
+                            📅 Aprillis on veel 2 vaba kohta — broneeri oma aeg enne kui järjekord pikeneb.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link
@@ -259,8 +373,19 @@ export default function KoduleheHindPage() {
                     </section>
                 </div>
 
-                {/* Back to blog */}
+                {/* Related articles + Back */}
                 <div className="mt-12 pt-6 border-t border-border">
+                    <p className="text-sm font-semibold text-foreground mb-4">Loe ka:</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <Link href="/blogi/erp-vale-valik" className="p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors text-sm">
+                            <span className="text-primary font-medium">5 märki, et su ERP valik on vale</span>
+                            <p className="text-muted-foreground text-xs mt-1">IT-audit · 10 min</p>
+                        </Link>
+                        <Link href="/blogi/ai-automatiseerimine" className="p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors text-sm">
+                            <span className="text-primary font-medium">AI automatiseerimine väikeettevõttele</span>
+                            <p className="text-muted-foreground text-xs mt-1">AI · 7 min</p>
+                        </Link>
+                    </div>
                     <Link href="/blogi" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         ← Tagasi blogisse
                     </Link>
