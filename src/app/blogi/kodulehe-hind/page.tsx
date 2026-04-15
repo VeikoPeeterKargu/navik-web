@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         description: 'Agentuur vs freelancer vs AI-lahendus. Ausad numbrid, peidetud kulud ja praktiline nõuanne.',
         url: 'https://navik.ee/blogi/kodulehe-hind',
         type: 'article',
-        publishedTime: '2026-04-15T00:00:00.000Z',
+        publishedTime: '2026-04-01T00:00:00.000Z',
         authors: ['Veiko-Peeter Kargu'],
     },
 };
@@ -23,8 +23,8 @@ export default function KoduleheHindPage() {
         "@type": "Article",
         "headline": "Kodulehe hind Eestis 2026 — mille eest sa tegelikult maksad?",
         "description": "Põhjalik ülevaade kodulehe loomise hindadest Eestis: agentuur, freelancer ja AI-toega lahendused.",
-        "datePublished": "2026-04-15",
-        "dateModified": "2026-04-15",
+        "datePublished": "2026-04-01",
+        "dateModified": "2026-04-01",
         "author": {
             "@type": "Person",
             "name": "Veiko-Peeter Kargu",
@@ -119,7 +119,7 @@ export default function KoduleheHindPage() {
             "name": "Raul"
         },
         "reviewBody": "Mina juba sain seda teenust ja väga rahul. Kui mõnel tuttaval ka vaja siis kindlasti soovitan!",
-        "datePublished": "2026-04-15"
+        "datePublished": "2026-04-01"
     };
 
     return (
@@ -163,7 +163,7 @@ export default function KoduleheHindPage() {
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <span>Veiko-Peeter Kargu</span>
                         <span>·</span>
-                        <time dateTime="2026-04-15">15. aprill 2026</time>
+                        <time dateTime="2026-04-01">1. aprill 2026</time>
                     </div>
                 </header>
 

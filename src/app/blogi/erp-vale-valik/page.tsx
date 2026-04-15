@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         description: '73% ERP projektidest ületab eelarvet. Siin on 5 hoiatusmärki, mida ettevõtjad ignoreerivad.',
         url: 'https://navik.ee/blogi/erp-vale-valik',
         type: 'article',
-        publishedTime: '2026-04-15T00:00:00.000Z',
+        publishedTime: '2026-04-08T00:00:00.000Z',
         authors: ['Veiko-Peeter Kargu'],
     },
 };
@@ -23,8 +23,8 @@ export default function ErpValeValikPage() {
         "@type": "Article",
         "headline": "5 märki, et su ERP valik on vale — enne kui on hilja",
         "description": "Enamik ERP projekte ületab eelarvet ja ajakava. 5 hoiatusmärki ja kuidas sõltumatu audit aitab.",
-        "datePublished": "2026-04-15",
-        "dateModified": "2026-04-15",
+        "datePublished": "2026-04-08",
+        "dateModified": "2026-04-08",
         "author": { "@type": "Person", "name": "Veiko-Peeter Kargu", "url": "https://kargu.ee" },
         "publisher": { "@type": "Organization", "name": "Navik OÜ", "url": "https://navik.ee" },
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://navik.ee/blogi/erp-vale-valik" },
@@ -92,7 +92,7 @@ export default function ErpValeValikPage() {
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mt-4">
                         <span>Veiko-Peeter Kargu</span>
                         <span>·</span>
-                        <time dateTime="2026-04-15">15. aprill 2026</time>
+                        <time dateTime="2026-04-08">8. aprill 2026</time>
                     </div>
                 </header>
 
