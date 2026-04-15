@@ -16,6 +16,30 @@ export const metadata = {
 
 const articles = [
     {
+        slug: 'digijuht-vs-it-juht',
+        title: 'Miks su ettevõte vajab digijuhti, mitte IT-juhti',
+        description: 'IT-juht haldab servereid. Digijuht haldab äri ja tehnoloogia piiriala. Miks osalise ajaga digijuht on VKE-le mõistlikum kui täiskohaga IT-inimene.',
+        date: '2026-04-15',
+        readTime: '6 min',
+        tag: 'Digijuhtimine',
+    },
+    {
+        slug: 'ai-automatiseerimine',
+        title: 'AI automatiseerimine väikeettevõttele 2026 — praktiline juhend',
+        description: 'Kuidas väikeettevõte saab AI-d kasutada ilma suure eelarveta: arved, pakkumised, klienditugi, sisu. Konkreetsed tööriistad ja ROI arvutus.',
+        date: '2026-04-15',
+        readTime: '7 min',
+        tag: 'AI & Automatiseerimine',
+    },
+    {
+        slug: 'erp-vale-valik',
+        title: '5 märki, et su ERP valik on vale — enne kui on hilja',
+        description: '73% ERP projektidest ületab eelarvet. Siin on 5 selget hoiatusmärki, mida ettevõtjad ignoreerivad — ja kuidas sõltumatu audit aitab.',
+        date: '2026-04-15',
+        readTime: '10 min',
+        tag: 'IT-audit',
+    },
+    {
         slug: 'kodulehe-hind',
         title: 'Kodulehe hind Eestis 2026 — mida sa tegelikult maksad?',
         description: 'Põhjalik ülevaade kodulehe loomise hindadest Eestis: agentuuri vs freelancer vs AI-toega lahendused. Ausad numbrid ja peidetud kulud.',
