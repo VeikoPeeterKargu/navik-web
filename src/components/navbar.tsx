@@ -20,7 +20,7 @@ const LEFT_NAV = [
   { name: 'Praktiline AI', href: '/ai' },
 ];
 const RIGHT_NAV = [
-  { name: 'Veeb', href: '/veeb' },
+  { name: 'Veeb', href: 'https://navik.ee/veeb', external: true },
   { name: 'Kogemus', href: '/#kogemus' },
   { name: 'Kontakt', href: '/#footer-contact' },
 ];
@@ -111,7 +111,7 @@ export function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.07 }}
               >
-                {item.href === '/veeb' ? (
+                {'external' in item && item.external ? (
                   <a
                     href={item.href}
                     target="_blank"
@@ -119,7 +119,7 @@ export function Navbar() {
                     onClick={() => setMobileOpen(false)}
                     className={cn(
                       'block text-2xl font-light py-4 border-b border-[#2A2820] transition-colors',
-                      pathname === item.href ? 'text-[#C9A027]' : 'text-[#F8F5EE] hover:text-[#C9A027]'
+                      'text-[#F8F5EE] hover:text-[#C9A027]'
                     )}
                     style={{ fontFamily: 'var(--font-display)' }}
                   >
@@ -162,17 +162,29 @@ export function Navbar() {
   );
 }
 
-function NavLink({ item, pathname }: { item: { name: string; href: string }; pathname: string }) {
+function NavLink({ item, pathname }: { item: { name: string; href: string; external?: boolean }; pathname: string }) {
   const isActive = pathname === item.href;
-  // /veeb on staatiline HTML (public/veeb/), vajab täislehe navigatsiooni
-  const isStatic = item.href === '/veeb';
-  const Tag = isStatic ? 'a' : Link;
-  const linkProps = isStatic
-    ? { href: item.href, target: '_blank' as const, rel: 'noopener noreferrer' }
-    : { href: item.href };
+
+  if (item.external) {
+    return (
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn(
+          'relative text-[1.07rem] tracking-[0.1em] transition-colors pb-0.5',
+          'text-[#F8F5EE]/85 hover:text-[#F8F5EE]'
+        )}
+        style={{ fontFamily: 'var(--font-body)' }}
+      >
+        {item.name}
+      </a>
+    );
+  }
+
   return (
-    <Tag
-      {...linkProps}
+    <Link
+      href={item.href}
       className={cn(
         'relative text-[1.07rem] tracking-[0.1em] transition-colors pb-0.5',
         isActive ? 'text-[#C9A027]' : 'text-[#F8F5EE]/85 hover:text-[#F8F5EE]'
@@ -188,6 +200,6 @@ function NavLink({ item, pathname }: { item: { name: string; href: string }; pat
           transition={{ type: 'spring', stiffness: 350, damping: 32 }}
         />
       )}
-    </Tag>
+    </Link>
   );
 }
