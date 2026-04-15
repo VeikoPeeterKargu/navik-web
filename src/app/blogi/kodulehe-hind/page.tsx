@@ -205,7 +205,7 @@ export default function KoduleheHindPage() {
                             <div className="pl-4">
                                 <p className="text-sm font-semibold tracking-wider uppercase text-primary mb-3">Kliendilugu</p>
                                 <p className="text-muted-foreground leading-relaxed mb-4">
-                                    <strong className="text-foreground">RS Auto</strong> — autohoolduse ettevõte, kes vajas professionaalset kodulehte teenuste ja hinnakirjaga. Eelmine leht oli vananenud ja mobiilis kasutamatu.
+                                    <a href="https://rsauto24.ee" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">RS Auto 24</a> — autohoolduse ettevõte, kes vajas professionaalset kodulehte teenuste ja hinnakirjaga. Eelmine leht oli vananenud ja mobiilis kasutamatu.
                                 </p>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                                     <div className="text-center">
