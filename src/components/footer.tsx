@@ -1,5 +1,18 @@
+'use client';
+
 import Link from 'next/link';
 import { NavikLogo } from '@/components/logo';
+
+type GtagWindow = typeof window & { gtag: (...args: unknown[]) => void };
+
+function trackEvent(eventName: string, label: string) {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as GtagWindow).gtag('event', eventName, {
+            event_category: 'conversion',
+            event_label: label
+        });
+    }
+}
 
 const footerLinks = {
     Teenused: [
@@ -68,8 +81,8 @@ export function Footer() {
                             style={{ fontFamily: 'var(--font-body)' }}
                         >
                             <span className="block">Registrikood: 17454389</span>
-                            <a href="mailto:peeter@kargu.ee" className="hover:text-[#C9A027] transition-colors block">peeter@kargu.ee</a>
-                            <a href="tel:+3725067651" className="hover:text-[#C9A027] transition-colors block">+372 50 67 651</a>
+                            <a href="mailto:peeter@kargu.ee" className="hover:text-[#C9A027] transition-colors block" onClick={() => trackEvent('email_klikk', 'footer_email')}>peeter@kargu.ee</a>
+                            <a href="tel:+3725067651" className="hover:text-[#C9A027] transition-colors block" onClick={() => trackEvent('telefon_klikk', 'footer_telefon')}>+372 50 67 651</a>
                             <span className="block">Tallinn, Eesti</span>
                         </address>
                         <a

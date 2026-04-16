@@ -7,11 +7,23 @@ function KontaktForm() {
     const searchParams = useSearchParams();
     const allikas = searchParams.get('allikas') || 'Otselink menüüst';
 
+    const handleSubmit = () => {
+        if (typeof window !== 'undefined' && 'gtag' in window) {
+            type GtagWindow = typeof window & { gtag: (...args: unknown[]) => void };
+            (window as GtagWindow).gtag('event', 'kontakt_form_saadetud', {
+                event_category: 'conversion',
+                event_label: allikas,
+                value: 1
+            });
+        }
+    };
+
     return (
         <form
             className="flex flex-col gap-6"
             action="https://formsubmit.co/peeter@kargu.ee"
             method="POST"
+            onSubmit={handleSubmit}
         >
             {/* FormSubmit settings */}
             <input type="hidden" name="_subject" value={`Navik päring — ${allikas}`} />

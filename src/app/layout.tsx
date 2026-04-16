@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import GoogleAnalytics from "@/components/analytics";
+import ScrollTracker from "@/components/scroll-tracker";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -146,6 +147,7 @@ export default function RootLayout({
       <body className={`${cormorant.variable} ${jakarta.variable} min-h-screen flex flex-col`}>
         {/* Google Analytics (GA4) */}
         <GoogleAnalytics />
+        <ScrollTracker />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
