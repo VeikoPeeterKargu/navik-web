@@ -19,10 +19,10 @@
       });
     }
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CQ79NTTPS"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFNZLBKTXP"></script>
   <script>
     gtag('js', new Date());
-    gtag('config', 'G-1CQ79NTTPS', {
+    gtag('config', 'G-EFNZLBKTXP', {
       'content_group': 'Veebitehas'
     });
   </script>
@@ -41,8 +41,8 @@
     if (localStorage.getItem('cookiesAccepted') === 'true') { loadClarity(); }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uus koduleht 1 päevaga — alates 100€ | Navik OÜ</title>
-  <meta name="description" content="Professionaalne koduleht alates 100€, valmis 1 päevaga. Klick Eesti asutaja, 30 aastat IT-kogemust. Maksad alles kui oled rahul. Navik OÜ.">
+  <title>Uus koduleht 1–2 päevaga — alates 100 € | Navik OÜ</title>
+  <meta name="description" content="Professionaalne koduleht alates 100€, valmis 1–2 päevaga. Klick Eesti asutaja, 30 aastat IT-kogemust. Maksad alles kui oled rahul. Navik OÜ.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Uus koduleht 100 € — valmis 1–2 päevaga">
   <meta property="og:description" content="Tehisintellekt teeb musta töö. Sina räägid oma ärist — mina ehitan puhta, kiire ja professionaalse kodulehe.">
@@ -112,7 +112,7 @@
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+372-506-7651",
-      "email": "peeter@kargu.ee",
+      "email": "veeb@navik.ee",
       "contactType": "sales"
     },
     "sameAs": [
@@ -290,6 +290,7 @@
     :focus:not(:focus-visible) { outline:none; }
     html { scroll-behavior:smooth; }
     body {
+      padding-top: 80px;
       font-family: var(--font-body);
       font-size: 17px;
       color: var(--text);
@@ -324,7 +325,7 @@
 
     /* --- Navigation --- */
     .nav-bar {
-      position:sticky; top:0; z-index:100;
+      position:fixed; top:0; left:0; width:100%; z-index:100;
       background: rgba(250,250,247,0.92);
       -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-light);
@@ -408,9 +409,14 @@
       font-style:italic; color:var(--accent);
     }
     .hero-sub {
-      font-size:19px; color:var(--text-secondary);
-      max-width:540px; margin:0 auto 40px;
-      line-height:1.7; font-weight:400;
+      font-size:clamp(28px, 4vw, 44px); color:var(--text);
+      max-width:720px; margin:0 auto 16px;
+      line-height:1.25; font-weight:400;
+      font-family:var(--font-display);
+    }
+    .hero-sub-note {
+      font-size:17px; color:var(--text-secondary);
+      margin:0 auto 40px; line-height:1.7;
     }
     .price-badge {
       display:inline-flex; align-items:center; gap:12px;
@@ -434,7 +440,7 @@
     }
     @media(max-width:640px) {
       .hero { padding:64px 0 56px; }
-      .hero-sub { font-size:17px; }
+      .hero-sub-note { font-size:15px; }
     }
 
     /* --- Section --- */
@@ -605,12 +611,12 @@
     .form-btn {
       font-family:var(--font-body); font-size:16px; font-weight:600;
       padding:16px 32px; border:none; border-radius:12px;
-      background:var(--accent); color:#fff; cursor:pointer;
+      background:#25D366; color:#fff; cursor:pointer;
       transition:background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
     .form-btn:hover {
-      background:var(--accent-hover); transform:translateY(-1px);
-      box-shadow:0 4px 16px rgba(61,90,254,0.25);
+      background:#1ebe5a; transform:translateY(-1px);
+      box-shadow:0 4px 16px rgba(37,211,102,0.3);
     }
     .form-note { font-size:13px; color:var(--text-muted); }
     .contact-info {
@@ -632,6 +638,33 @@
     .cta-section {
       padding:80px 0; text-align:center;
       background:var(--bg-warm); border-top:1px solid var(--border);
+    }
+
+    /* --- Floating WA --- */
+    .wa-floating {
+      position:fixed; bottom:24px; right:24px; z-index:90;
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+    }
+    .wa-floating-pill {
+      background:#1a1f2e; color:#fff; padding:8px 16px;
+      border-radius:24px; font-size:13px; font-weight:600;
+      font-family:var(--font-body); box-shadow:var(--shadow-md);
+      white-space:nowrap;
+    }
+    .wa-floating-btn {
+      width:56px; height:56px; border-radius:50%;
+      background:#25D366; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 16px rgba(37,211,102,0.4);
+      transition:transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-floating-btn:hover {
+      transform:scale(1.08); box-shadow:0 6px 24px rgba(37,211,102,0.5);
+    }
+    .wa-floating-btn svg { width:28px; height:28px; }
+    @media(max-width:640px) {
+      .wa-floating-pill { display:none; }
+      .wa-floating { bottom:16px; right:16px; }
     }
     .cta-title {
       font-family:var(--font-display); font-size:clamp(28px,4vw,40px);
@@ -767,20 +800,22 @@
 <div class="hero reveal" id="home">
   <div class="container">
     <span class="hero-tag" id="tag">Klick Eesti asutajalt • 30 aastat IT-kogemust</span>
-    <h1 id="h1">Uus koduleht <em>1 päevaga</em> — alates 100€</h1>
-    <p class="hero-sub" id="sub">Maksad alles kui oled rahul. Tehisintellekt teeb musta töö — sina räägid oma ärist, mina ehitan puhta, kiire ja professionaalse kodulehe.</p>
+    <h1 id="h1">Uus koduleht <em>1–2 päevaga</em> — alates 100 €</h1>
+    <p class="hero-sub" id="sub">🎁 + 6 kuud veebimajutust tasuta.</p>
+    <p class="hero-sub-note">Maksad alles siis, kui oled tulemusega rahul.</p>
     <div class="hero-cta-group">
       <a href="https://wa.me/3725067651?text=Tere!%20Soovin%20kodulehte%20oma%20ettev%C3%B5ttele.%20Minu%20nimi%20on%20" target="_blank" rel="noopener" class="wa-btn">
         <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span id="hero-wa-btn">Kirjuta WhatsAppis</span>
       </a>
-      <a href="#contact" class="outline-btn" id="hero-form-btn">Küsi tasuta pakkumist</a>
+      <a href="#contact" class="outline-btn" id="hero-form-btn">Küsi pakkumist</a>
     </div>
-    <p class="speed-note" id="speed-note">Valmis 1 päevaga · Maksad alles kui rahul · 100€ ühekordne kulu</p>
+    <p class="speed-note" id="speed-note">Valmis 1–2 päevaga · 6 kuud hostingut tasuta · Arve esitame siis kui uus leht teile sobib</p>
     <div class="social-proof-bar" id="social-proof">
-      <span>✅ 5+ kodulehte ehitatud</span>
-      <span>⭐ 100% klientide rahulolu</span>
-      <span>⚡ PageSpeed 96+</span>
+      <span>💰 100 € ühekordne</span>
+      <span>⚡ 1–2 päeva</span>
+      <span>🎁 6 kuud hostingut</span>
+      <span>🔒 Ei mingeid kuutasusid</span>
     </div>
   </div>
 </div>
@@ -795,36 +830,13 @@
   </div>
 </div>
 
-<!-- Inline kontaktiriba - conversion optimeering -->
-<div class="reveal" style="padding: 0 0 40px;">
-  <div class="container" style="text-align:center;">
-    <div style="background: linear-gradient(135deg, #1a1f2e, #252b3d); padding: 28px 32px; border-radius: 16px; max-width: 560px; margin: 0 auto; box-shadow: 0 4px 24px rgba(0,0,0,0.12);">
-      <p style="color: #C9A027; font-weight: 600; margin-bottom: 16px; font-size: 18px; font-family: var(--font-display);">Küsi pakkumist kohe — alates 100€</p>
-      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <a href="tel:+3725067651" onclick="gtag('event','telefon_klikk',{event_category:'conversion',event_label:'veeb_hero_bar'})" 
-           style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: #ffffff; color: #1A1A1A; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 16px; font-family: var(--font-body); transition: transform 0.2s, box-shadow 0.2s;" 
-           onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 16px rgba(255,255,255,0.2)'" 
-           onmouseout="this.style.transform='';this.style.boxShadow=''">
-            📞 +372 50 67 651
-        </a>
-        <a href="https://wa.me/3725067651?text=Tere!%20Soovin%20kodulehe%20pakkumist." target="_blank" rel="noopener" onclick="gtag('event','whatsapp_klikk',{event_category:'conversion',event_label:'veeb_hero_bar'})"
-           style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: #25D366; color: white; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 16px; font-family: var(--font-body); transition: transform 0.2s, box-shadow 0.2s;"
-           onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.3)'" 
-           onmouseout="this.style.transform='';this.style.boxShadow=''">
-            💬 WhatsApp
-        </a>
-      </div>
-      <p style="color: rgba(255,255,255,0.5); font-size: 13px; margin-top: 12px; font-family: var(--font-body);">Maksad alles kui oled rahul · Vastan 2 tunni jooksul</p>
-    </div>
-  </div>
-</div>
 
 <!-- Features -->
 <section class="section reveal" id="features" aria-labelledby="what-label">
   <div class="container">
     <p class="section-label" id="what-label">Mida saad</p>
     <h2 class="section-title" style="max-width:500px">Kõik, mida su äri veebis vajab.</h2>
-    <p class="answer-capsule" id="answer-capsule">Navik OÜ ehitab väikeettevõtetele professionaalse kodulehe alates 100€, 1 päevaga valmis. Klick Eesti asutaja, 30 aastat IT-kogemust. Maksad alles kui oled rahul — leht on mobiilisõbralik, Google'is leitav, sinu oma serveris, ilma kuutasudeta.</p>
+    <p class="answer-capsule" id="answer-capsule">Navik OÜ ehitab väikeettevõtetele professionaalse kodulehe alates 100 €, 1–2 päevaga valmis. Klick Eesti asutaja, 30 aastat IT-kogemust. Maksad alles kui oled rahul — leht on mobiilisõbralik, Google'is leitav, sinu oma serveris, ilma kuutasudeta.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">◻</div>
@@ -858,8 +870,8 @@
     <div class="pricing-table">
       <div class="pricing-row">
         <div>
-          <p class="pricing-name" id="p1n">Üheleheküljeline (one-page)</p>
-          <p class="pricing-detail" id="p1d">Hero + Teenused + Meist + Kontakt · max 5 sektsiooni</p>
+          <p class="pricing-name" id="p1n">Üheleheline koduleht</p>
+          <p class="pricing-detail" id="p1d">Hero + teenused + meist + KKK + kontakt. <strong>Sisaldab 6 kuud tasuta veebimajutust (~60 € väärtus).</strong></p>
         </div>
         <p class="pricing-price">100 €</p>
       </div>
@@ -885,7 +897,7 @@
         <p class="pricing-price" id="p4p">Küsi pakkumist</p>
       </div>
     </div>
-    <p class="pricing-note" id="pricing-note">Enamik väikeettevõtteid saab hakkama ühelehelise lehega (100 €) või 2–3 lehega (kuni 240 €). Erilahendus on vajalik ainult siis, kui tahad e-poodi või broneerimissüsteemi.</p>
+    <p class="pricing-note" id="pricing-note">Enamik väikeettevõtteid saab hakkama ühelehelise lehega (100 € + 6 kuud hostingut tasuta) või 2–3 lehega (kuni 240 €). Peale 6 kuud jätkad Veebimajutus.ee standardhinnaga (~5 €/kuus), ilma siduva lepinguta.</p>
   </div>
 </section>
 
@@ -900,7 +912,7 @@
         <p class="step-desc" id="s1d">Saada 3–4 lauset oma ärist, logo (kui on) ja kontaktinfo.</p>
       </div>
       <div class="step">
-        <p class="step-title" id="s2t">AI ehitab</p>
+        <p class="step-title" id="s2t">Ehitan sinu lehe</p>
         <p class="step-desc" id="s2d">Ehitan AI abil lehe. Saad preview-lingi 1–2 päevaga.</p>
       </div>
       <div class="step">
@@ -921,6 +933,20 @@
     <p class="section-label" id="portfolio-label">Tehtud tööd</p>
     <h2 class="section-title" style="max-width:500px">Päris tulemused, mitte lubadused.</h2>
     <div class="portfolio-grid">
+      <a href="https://www.metsapidu.ee/" target="_blank" rel="noopener" class="portfolio-card">
+        <div class="portfolio-thumb"><img src="/veeb/assets/metsapidu.jpg" alt="Metsapidu.ee — Forest Feast Eesti koduleht" loading="lazy"></div>
+        <div class="portfolio-info">
+          <p class="portfolio-name">Metsapidu</p>
+          <p class="portfolio-type" id="pt0">Toiduainete maaletooja</p>
+        </div>
+      </a>
+      <a href="https://bsfort.ee/" target="_blank" rel="noopener" class="portfolio-card">
+        <div class="portfolio-thumb" style="background:#1a1f2e;display:flex;align-items:center;justify-content:center;"><img src="/veeb/assets/bsfort.jpg" alt="BSFORT — ehituse peatöövõtt" loading="lazy" style="object-fit:contain;padding:16px;"></div>
+        <div class="portfolio-info">
+          <p class="portfolio-name">BSFORT</p>
+          <p class="portfolio-type" id="pt6">Ehituse peatöövõtt</p>
+        </div>
+      </a>
       <a href="https://rsauto24.ee/" target="_blank" rel="noopener" class="portfolio-card">
         <div class="portfolio-thumb"><img src="/veeb/assets/rsauto24.webp" alt="RSauto24 koduleht" loading="lazy"></div>
         <div class="portfolio-info">
@@ -967,9 +993,15 @@
     <div class="about-block">
       <div class="about-meta">
         <p class="about-name">Veiko-Peeter Kargu</p>
-        <p class="about-title">Navik OÜ</p>
+        <p class="about-title">Klick Eesti asutaja. 30 aastat IT-d.</p>
       </div>
-      <p class="about-text" id="about-text">Olen teinud Eesti väikeettevõtjatele kodulehti, mis toovad kliente — mitte ainult ilusaid pilte. Üle 25 aasta kogemust IT ja ettevõtluses, sealhulgas Eesti suurima IT-jaeketi ehitamine nullist üles. Täna kasutan AI-tööriistu, et teha professionaalne esindusleht murdosa tavahinnast ja murdosa tavaajast.</p>
+      <div class="about-text" id="about-text">
+        <p>1996. aastal asutasin K-Arvutisalongi — kaks inimest, üks lett Tallinnas. Kümne aastaga kasvas sellest <strong>Klick Eesti</strong>, Baltikumi suurim IT-jaekett, mis 2006. aastal müüdi.</p>
+        <p style="margin-top:12px;">Vahepeal: ERP-juurutused BCS Iteras, suured IT-projektid Eesti Raudteel. Olen istunud mõlemal pool lauda — nii müüja kui ostjana IT-lahendustele. Tean, kus raha kulub põhjusega, kus ilma.</p>
+        <p style="margin-top:16px;font-weight:600;">Miks ma teen väikeettevõtjale 100 € eest kodulehti?</p>
+        <p style="margin-top:8px;">Sest AI on muutnud mängureegleid. Musta töö — koodi, struktuuri, esmase sisu — teeb tehisintellekt nüüd kordades kiiremini. Enamik agentuure küsib endiselt 2015. aasta hindu: 3 000 € ja 6 nädalat.</p>
+        <p style="margin-top:8px;">Mina kasutan AI-d kui tööriista, mitte asendajana — ja pakun 30 aastat IT-arhitekti kogemust. Saad professionaalse lehe päevadega, mitte kuudega. Maksad tulemuse eest, mitte venitatud protsessi eest.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -982,7 +1014,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <p class="faq-q" id="q1">Kas 100 € on lõplik hind?</p>
-        <p class="faq-a" id="a1">Jah. 100 € on minu tööraha ühelehelise lehe eest. Sinu kanda jäävad vaid serveri ja domeeni kulud (tavaliselt 5–15 €/kuus), mille valimisel aitan.</p>
+        <p class="faq-a" id="a1">Jah. 100 € on minu tööraha ühelehelise lehe eest. Esimesed 6 kuud veebimajutust saad tasuta kaasa (koostöös Veebimajutus.ee-ga, ~60 € väärtus). Peale seda jätkad Veebimajutus.ee standardhinnaga (alates ~5 €/kuus). Domeen tuleb sul ise osta — aitan valikuga.</p>
       </div>
       <div class="faq-item">
         <p class="faq-q" id="q2">Kas ma pean maksma ettemaksu?</p>
@@ -1002,7 +1034,7 @@
       </div>
       <div class="faq-item">
         <p class="faq-q" id="q6">Mis platvormil leht ehitatakse?</p>
-        <p class="faq-a" id="a6">Puhas HTML/CSS kood, mis töötab kõikjal. Ei mingit WordPress’i, Wix’i ega muud platvormi — leht on kerge, kiire ja sinu täielik oma. Ei mingeid kohustuslikke uuendusi ega turvaauke.</p>
+        <p class="faq-a" id="a6">Puhas HTML/CSS kood, mis töötab kõikjal. Ei mingit WordPress'i, Wix'i ega muud platvormi — leht on kerge, kiire ja täielikult sinu oma. Kuna leht on lihtsas koodis, pole WordPressi-stiilis pidevaid uuendusi vaja ja turvariske on tunduvalt vähem kui platvormidel, mida häkkerid massiliselt ründavad.</p>
       </div>
       <div class="faq-item">
         <p class="faq-q" id="q7">Kas leht on Google’is leitav?</p>
@@ -1010,7 +1042,7 @@
       </div>
       <div class="faq-item">
         <p class="faq-q" id="q8">Mis kui mu domeeni veel pole?</p>
-        <p class="faq-a" id="a8">Pole probleemi. Aitan domeeni registreerida ja serveri seadistada — see käib sinu serverikulu sisse (5–15 €/kuus). Näitan kräkk ette ära.</p>
+        <p class="faq-a" id="a8">Pole probleemi. Aitan domeeni registreerida (~10 €/aasta) ja server seadistada — esimesed 6 kuud hostingut on tasuta, nii et esimesel aastal on su ainus kulu domeenitasu. Näitan kõik ette ära.</p>
       </div>
     </div>
   </div>
@@ -1029,7 +1061,7 @@
       <span class="contact-wa-note" id="contact-wa-note">Kõige kiirem viis ühendust saada</span>
     </div>
     <div class="contact-wrapper">
-      <form action="https://formsubmit.co/peeter@kargu.ee" method="POST" class="contact-form">
+      <form action="https://formsubmit.co/veeb@navik.ee" method="POST" class="contact-form">
         <!-- Turvaseaded ja suunamine -->
         <input type="hidden" name="_next" value="https://navik.ee/veeb/?status=success#contact">
         <input type="hidden" name="_captcha" value="false">
@@ -1048,7 +1080,7 @@
           <input type="checkbox" name="privacy_consent" required aria-required="true" style="margin-top:3px;flex-shrink:0;">
           <span id="form-privacy">Nõustun <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Privaatsustingimustega</a></span>
         </label>
-        <button type="submit" class="form-btn" id="form-btn" onclick="gtag('event','kontakt_form_saadetud',{event_category:'conversion',event_label:'veeb_contact_form',value:1})">Küsi tasuta pakkumist</button>
+        <button type="submit" class="form-btn" id="form-btn" onclick="gtag('event','kontakt_form_saadetud',{event_category:'conversion',event_label:'veeb_contact_form',value:1})">Küsi pakkumist</button>
         <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
         <p class="form-note" style="line-height:1.5;"><span id="form-note">Vastan tavaliselt sama päeva jooksul.</span></p>
       <script>
@@ -1097,7 +1129,7 @@
         <p class="contact-info-title">Kontaktandmed</p>
         <div class="contact-row">
           <span class="contact-label">E-post</span>
-          <a href="mailto:peeter@kargu.ee" class="contact-val">peeter@kargu.ee</a>
+          <a href="mailto:veeb@navik.ee" class="contact-val">veeb@navik.ee</a>
         </div>
         <div class="contact-row">
           <span class="contact-label">Telefon / WhatsApp</span>
@@ -1119,12 +1151,20 @@
 <!-- CTA -->
 <div class="cta-section reveal">
   <div class="container">
-    <h2 class="cta-title" id="cta-title">Valmis alustama? Alates 100€, valmis 1 päevaga.</h2>
-    <p class="cta-sub" id="cta-sub">Kirjuta mulle 3–4 lauset oma ärist ja saame alustada. Maksad alles kui oled rahul.</p>
-    <a href="#contact" class="cta-btn" id="cta-btn">Küsi tasuta pakkumist</a>
+    <h2 class="cta-title" id="cta-title">Valmis alustama? Alates 100 €, valmis 1–2 päevaga.</h2>
+    <p class="cta-sub" id="cta-sub">Kirjuta mulle 3–4 lauset oma ärist ja saame alustada. Leht on valmis 1–2 päevaga.</p>
+    <a href="#contact" class="cta-btn" id="cta-btn">Küsi pakkumist</a>
   </div>
 </div>
 </main>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/3725067651?text=Tere!%20Soovin%20kodulehte%20oma%20ettev%C3%B5ttele." target="_blank" rel="noopener" class="wa-floating" onclick="gtag('event','whatsapp_klikk',{event_category:'conversion',event_label:'floating'})">
+  <span class="wa-floating-pill">🎁 6 kuud hostingut tasuta</span>
+  <span class="wa-floating-btn">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </span>
+</a>
 
 <footer class="footer">
   <p>© 2026 Navik OÜ (Reg: 17454389) · <span id="footer-text">Veiko-Peeter Kargu</span></p>
@@ -1132,7 +1172,7 @@
 </footer>
 
 <script>
-const T={et:{'nav-pricing':'Hinnad','nav-portfolio':'Tööd','nav-about':'Minust','nav-contact':'Kontakt',tag:'Veebilehed · AI abil · Navik OÜ',h1:'Uus koduleht <em>1–2 päevaga.</em><br>Ilma agentuuride bürokraatiata.',sub:'Tehisintellekt teeb musta töö. Sina räägid mulle oma ärist — mina ehitan puhta, kiire ja professionaalse kodulehe.','price-label':'üheleheküljeline leht','hero-wa-btn':'Kirjuta WhatsAppis','hero-form-btn':'Saada päring','speed-note':'Valmis 1–2 tööpäevaga · Mobiilisõbralik · Sinu oma serveris','what-label':'Mida saad',f1t:"Sind leitakse Google'ist",f1d:'Su ettevõte ilmub otsingutulemustes. Kliendid leiavad su ise üles, mitte ainult suust-suhu.',f2t:'Päringud otse meilile',f2d:'Kontaktivorm lehel — kliendid kirjutavad sulle otse. Iga päring jõuab sinu postkasti.',f3t:'Leht on sinu oma',f3d:'Avaldame sinu domeenil ja serveris. Mingeid kuutasusid mulle, mingeid lukke — leht kuulub sulle.',f4t:'Valmis 1–2 päevaga',f4d:'Saadad mulle materjali, saad preview-lingi paari päevaga. Agentuurid lubavad nädalaid — mina luban päevi.','pricing-label':'Hinnad',p1n:'Üheleheküljeline (one-page)',p1d:'Hero + Teenused + Meist + Kontakt · max 5 sektsiooni',p2n:'Iga lisaleht',p2d:'Teenuse alamleht, portfoolio, galerii vm',p3n:'Hilisemad muudatused',p3d:'Tekstid, pildid, väiksemad täiendused',p4n:'Erilahendused',p4d:'E-pood, broneerimissüsteem, keerukam funktsionaalsus',p4p:'Küsi pakkumist','pricing-note':'Enamik väikeettevõtteid saab hakkama ühelehelise lehega (100 €) või 2–3 lehega (kuni 240 €). Erilahendus on vajalik ainult siis, kui tahad e-poodi või broneerimissüsteemi.','how-label':'Kuidas see käib',s1t:'Kirjuta mulle',s1d:'Saada 3–4 lauset oma ärist, logo (kui on) ja kontaktinfo.',s2t:'AI ehitab',s2d:'Ehitan AI abil lehe. Saad preview-lingi 1–2 päevaga.',s3t:'Kinnitad',s3d:'Vaatad üle, annad tagasiside. Teeme parandused kuni oled rahul.',s4t:'Live!',s4d:'Makse, domeen seadistatakse — leht on sinu oma.','portfolio-label':'Tehtud tööd',pt1:'Autoteenindus',pt2:'Isiklik portaal',pt3:'Reisiteenused',pt4:'IT-nõustamine',pt5:'Kunstikogu','about-label':'Minust','about-text':'Olen teinud Eesti väikeettevõtjatele kodulehti, mis toovad kliente — mitte ainult ilusaid pilte. Üle 25 aasta kogemust IT ja ettevõtluses, sealhulgas Eesti suurima IT-jaeketi ehitamine nullist üles. Täna kasutan AI-tööriistu, et teha professionaalne esindusleht murdosa tavahinnast ja murdosa tavaajast.','faq-label':'KKK',q1:'Kas 100 € on lõplik hind?',a1:'Jah. 100 € on minu tööraha ühelehelise lehe eest. Sinu kanda jäävad vaid serveri ja domeeni kulud (tavaliselt 5–15 €/kuus), mille valimisel aitan.',q2:'Kas ma pean maksma ettemaksu?',a2:'Ei. Ehitan lehe valmis ja näitan sulle testlingi. Sa maksad alles siis, kui oled tulemusega rahul.',q3:'Kes vastutab tekstide õigsuse eest?',a3:'Ehitan struktuuri ja disaini. Tekstid vaatab klient üle enne avaldamist — sa näed preview-linki ja kinnitad enne, kui leht läheb live.',q4:'Mis siis, kui tahan hiljem midagi muuta?',a4:'Kirjutad mulle, teen muudatuse ära ja esitan arve kulunud aja eest — 40 €/h. Ei mingeid kuutasusid.',q5:'Kas saan ka mitme leheküljega saidi?',a5:'Jah. Iga lisaleht maksab 70 €. Keerukamad lahendused (e-pood, broneerimissüsteem) on eraldi hinnapakkumisega.',q6:'Mis platvormil leht ehitatakse?',a6:'Puhas HTML/CSS kood, mis töötab kõikjal. Ei mingit WordPress\u2019i, Wix\u2019i ega muud platvormi — leht on kerge, kiire ja sinu täielik oma. Ei mingeid kohustuslikke uuendusi ega turvaauke.',q7:'Kas leht on Google\u2019is leitav?',a7:'Jah. Sisestan SEO meta tagid, struktureeritud andmed ja sitemap\u2019i. Su leht on Google\u2019is indekseeritav kohe pärast avaldamist.',q8:'Mis kui mu domeeni veel pole?',a8:'Pole probleemi. Aitan domeeni registreerida ja serveri seadistada — see käib sinu serverikulu sisse (5–15 €/kuus). Näitan kräkk ette ära.','contact-label':'Võta ühendust','contact-wa-btn':'Kirjuta WhatsAppis','contact-wa-note':'Kõige kiirem viis ühendust saada','form-name':'Sinu nimi','form-email':'E-post','form-company':'Ettevõte (valikuline)','form-message':'Kirjelda lühidalt oma äri ja mida soovid...','form-btn':'Saada päring','form-note':'Vastan tavaliselt sama päeva jooksul.','form-privacy':'Päringut saates nõustud <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Privaatsustingimustega</a>.','cta-title':'Valmis alustama?','cta-sub':'Kirjuta mulle 3–4 lauset oma ärist ja saame alustada. Leht on valmis 1–2 päevaga.','cta-btn':'Kirjuta mulle','footer-text':'Veiko-Peeter Kargu · Navik OÜ','cookie-text':'Sellel veebilehel kasutame küpsiseid (sh Google Analytics), et analüüsida liiklust ja pakkuda parimat kasutajakogemust.','cookie-accept':'Nõustun','cookie-decline':'Keeldun'},en:{'nav-pricing':'Pricing','nav-portfolio':'Work','nav-about':'About','nav-contact':'Contact',tag:'Websites · AI-powered · Navik OÜ',h1:'A new website <em>in 1–2 days.</em><br>Without agency bureaucracy.',sub:'AI does the heavy lifting. You tell me about your business — I build a clean, fast, professional website.','price-label':'one-page website','hero-wa-btn':'Write on WhatsApp','hero-form-btn':'Send enquiry','speed-note':'Ready in 1–2 business days · Mobile-friendly · Hosted on your server','what-label':'What you get',f1t:'Found on Google',f1d:'Your business appears in search results. Clients find you on their own, not just through word of mouth.',f2t:'Enquiries to your inbox',f2d:'A contact form on your site — clients write to you directly. Every enquiry lands in your inbox.',f3t:'The site is yours',f3d:'Published on your domain and server. No monthly fees to me, no locks — the site belongs to you.',f4t:'Ready in 1–2 days',f4d:'Send me your materials, get a preview link within days. Agencies promise weeks — I promise days.','pricing-label':'Pricing',p1n:'One-page website',p1d:'Hero + Services + About + Contact · max 5 sections',p2n:'Each additional page',p2d:'Service subpage, portfolio, gallery, etc.',p3n:'Future changes',p3d:'Text, images, minor updates',p4n:'Custom solutions',p4d:'E-commerce, booking system, complex functionality',p4p:'Request a quote','pricing-note':'Most small businesses do well with a one-page site (100 €) or 2–3 pages (up to 240 €). A custom solution is needed only for e-commerce or booking systems.','how-label':'How it works',s1t:'Write to me',s1d:'Send 3–4 sentences about your business, your logo (if available) and contact details.',s2t:'AI builds',s2d:'I build the site using AI. You get a preview link in 1–2 days.',s3t:'You review',s3d:'You check it over, give feedback. We refine until you are happy.',s4t:'Live!',s4d:'Payment, domain is set up — the site is yours.','portfolio-label':'Portfolio',pt1:'Auto services',pt2:'Personal portal',pt3:'Travel services',pt4:'IT consulting',pt5:'Art collection','about-label':'About me','about-text':"I've built websites for Estonian small businesses that bring clients — not just pretty pictures. Over 25 years of experience in IT and business, including building Estonia's largest IT retail chain from scratch. Today I use AI tools to create professional business websites at a fraction of the usual cost and time.",'faq-label':'FAQ',q1:'Is 100 € the final price?',a1:'Yes. 100 € is my fee for a one-page site. You only pay for your server and domain (typically 5–15 €/month), which I help you set up.',q2:'Do I need to pay upfront?',a2:'No. I build the site and share a test link. You pay only when you are happy with the result.',q3:'Who is responsible for the content?',a3:'I build the structure and design. You review the texts before publishing — you see a preview and confirm before it goes live.',q4:'What if I want changes later?',a4:'Write to me, I make the change and invoice for time spent — 40 €/h. No monthly fees.',q5:'Can I get a multi-page site?',a5:'Yes. Each additional page costs 70 €. Complex solutions (e-commerce, booking) are quoted separately.',q6:'What platform is the site built on?',a6:'Pure HTML/CSS code that works everywhere. No WordPress, Wix, or any other platform — the site is lightweight, fast, and fully yours. No mandatory updates or security patches.',q7:'Will the site be found on Google?',a7:'Yes. I set up SEO meta tags, structured data, and a sitemap. Your site is indexable by Google right after publishing.',q8:'What if I don\u2019t have a domain yet?',a8:'No problem. I help you register a domain and set up hosting — it\u2019s included in your hosting costs (5–15 €/month).','contact-label':'Get in touch','contact-wa-btn':'Write on WhatsApp','contact-wa-note':'The fastest way to get in touch','form-name':'Your name','form-email':'Email','form-company':'Company (optional)','form-message':'Briefly describe your business and what you need...','form-btn':'Send enquiry','form-note':'I usually reply within the same day.','form-privacy':'By sending an enquiry, you agree to our <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.','cta-title':'Ready to start?','cta-sub':'Write me 3–4 sentences about your business and we can begin. Site ready in 1–2 days.','cta-btn':'Write to me','footer-text':'Veiko-Peeter Kargu · Navik OÜ','cookie-text':'We use cookies (incl. Google Analytics) on this website to analyze traffic and provide the best user experience.','cookie-accept':'Accept','cookie-decline':'Decline'},ru:{'nav-pricing':'Цены','nav-portfolio':'Работы','nav-about':'Обо мне','nav-contact':'Контакт',tag:'Веб-сайты · На основе ИИ · Navik OÜ',h1:'Новый сайт <em>за 1–2 дня.</em><br>Без бюрократии агентств.',sub:'ИИ делает всю тяжёлую работу. Вы рассказываете о бизнесе — я создаю чистый, быстрый и профессиональный сайт.','price-label':'одностраничный сайт','hero-wa-btn':'Написать в WhatsApp','hero-form-btn':'Отправить запрос','speed-note':'Готово за 1–2 рабочих дня · Мобильная версия · На вашем сервере','what-label':'Что вы получаете',f1t:'Вас найдут в Google',f1d:'Ваш бизнес появится в результатах поиска. Клиенты найдут вас сами, а не только через сарафанное радио.',f2t:'Заявки прямо на почту',f2d:'Контактная форма на сайте — клиенты пишут вам напрямую. Каждая заявка приходит в ваш почтовый ящик.',f3t:'Сайт полностью ваш',f3d:'Публикуем на вашем домене и сервере. Никаких ежемесячных платежей мне, никаких замков — сайт принадлежит вам.',f4t:'Готово за 1–2 дня',f4d:'Отправляете материалы, получаете превью-ссылку за пару дней. Агентства обещают недели — я обещаю дни.','pricing-label':'Цены',p1n:'Одностраничный сайт',p1d:'Hero + Услуги + О нас + Контакты · макс. 5 секций',p2n:'Каждая доп. страница',p2d:'Страница услуги, портфолио, галерея',p3n:'Будущие изменения',p3d:'Тексты, изображения, небольшие правки',p4n:'Нестандартные решения',p4d:'Интернет-магазин, система бронирования, сложная функциональность',p4p:'Запросить расчёт','pricing-note':'Большинству малых предприятий достаточно одностраничного сайта (100 €) или 2–3 страниц (до 240 €). Нестандартное решение нужно только для интернет-магазина или системы бронирования.','how-label':'Как это работает',s1t:'Напишите мне',s1d:'Отправьте 3–4 предложения о бизнесе, логотип (если есть) и контакты.',s2t:'ИИ строит',s2d:'Я создаю сайт с помощью ИИ. Превью-ссылка за 1–2 дня.',s3t:'Вы проверяете',s3d:'Просматриваете, даёте обратную связь. Вносим правки, пока не довольны.',s4t:'Запуск!',s4d:'Оплата, настройка домена — сайт ваш.','portfolio-label':'Портфолио',pt1:'Автосервис',pt2:'Личный портал',pt3:'Туристические услуги',pt4:'IT-консалтинг',pt5:'Коллекция искусства','about-label':'Обо мне','about-text':'Я создаю сайты для малого бизнеса Эстонии, которые приводят клиентов — а не просто красивые картинки. Более 25 лет опыта в IT и бизнесе, включая создание крупнейшей IT-сети Эстонии с нуля. Сегодня я использую ИИ, чтобы создавать профессиональные бизнес-сайты за долю обычной стоимости и времени.','faq-label':'FAQ',q1:'100 € — это окончательная цена?',a1:'Да. 100 € — моя плата за одностраничный сайт. Вы оплачиваете только хостинг и домен (обычно 5–15 €/мес.).',q2:'Нужна ли предоплата?',a2:'Нет. Я создаю сайт и показываю тестовую ссылку. Вы платите только когда довольны результатом.',q3:'Кто отвечает за тексты?',a3:'Я строю структуру и дизайн. Клиент проверяет тексты перед публикацией.',q4:'Что если захочу изменения позже?',a4:'Напишите мне, сделаю правки и выставлю счёт — 40 €/ч. Никаких ежемесячных платежей.',q5:'Можно заказать многостраничный сайт?',a5:'Да. Каждая доп. страница — 70 €. Сложные решения (магазин, бронирование) — по запросу.',q6:'На какой платформе делается сайт?',a6:'Чистый HTML/CSS код, который работает везде. Никакого WordPress, Wix или другой платформы — сайт лёгкий, быстрый и полностью ваш.',q7:'Будет ли сайт виден в Google?',a7:'Да. Настраиваю SEO мета-теги, структурированные данные и sitemap. Сайт индексируется Google сразу после публикации.',q8:'Что если у меня ещё нет домена?',a8:'Не проблема. Помогу зарегистрировать домен и настроить хостинг — это входит в стоимость хостинга (5–15 €/мес.).','contact-label':'Связаться','contact-wa-btn':'Написать в WhatsApp','contact-wa-note':'Самый быстрый способ связаться','form-name':'Ваше имя','form-email':'Email','form-company':'Компания (необязательно)','form-message':'Кратко опишите бизнес и что вам нужно...','form-btn':'Отправить запрос','form-note':'Обычно отвечаю в тот же день.','form-privacy':'Отправляя запрос, вы соглашаетесь с нашей <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Политикой конфиденциальности</a>.','cta-title':'Готовы начать?','cta-sub':'Напишите 3–4 предложения о вашем бизнесе — и мы начнём. Сайт готов за 1–2 дня.','cta-btn':'Написать мне','footer-text':'Veiko-Peeter Kargu · Navik OÜ','cookie-text':'Мы используем файлы cookie (вкл. Google Analytics) на этом сайте для анализа трафика и предоставления лучшего пользовательского опыта.','cookie-accept':'Принимаю','cookie-decline':'Отказываюсь'}};
+const T={et:{'nav-pricing':'Hinnad','nav-portfolio':'Tööd','nav-about':'Minust','nav-contact':'Kontakt',tag:'Veebilehed · AI abil · Navik OÜ',h1:'Uus koduleht <em>1–2 päevaga</em> — alates 100 €',sub:'🎁 + 6 kuud veebimajutust tasuta.','price-label':'üheleheküljeline leht','hero-wa-btn':'Kirjuta WhatsAppis','hero-form-btn':'Saada päring','speed-note':'Valmis 1–2 päevaga · 6 kuud hostingut tasuta · Arve esitame siis kui uus leht teile sobib','what-label':'Mida saad',f1t:"Sind leitakse Google'ist",f1d:'Su ettevõte ilmub otsingutulemustes. Kliendid leiavad su ise üles, mitte ainult suust-suhu.',f2t:'Päringud otse meilile',f2d:'Kontaktivorm lehel — kliendid kirjutavad sulle otse. Iga päring jõuab sinu postkasti.',f3t:'Leht on sinu oma',f3d:'Avaldame sinu domeenil ja serveris. Mingeid kuutasusid mulle, mingeid lukke — leht kuulub sulle.',f4t:'Valmis 1–2 päevaga',f4d:'Saadad mulle materjali, saad preview-lingi paari päevaga. Agentuurid lubavad nädalaid — mina luban päevi.','pricing-label':'Hinnad',p1n:'Üheleheline koduleht',p1d:'Hero + teenused + meist + KKK + kontakt. <strong>Sisaldab 6 kuud tasuta veebimajutust.</strong>',p2n:'Iga lisaleht',p2d:'Teenuse alamleht, portfoolio, galerii vm',p3n:'Hilisemad muudatused',p3d:'Tekstid, pildid, väiksemad täiendused',p4n:'Erilahendused',p4d:'E-pood, broneerimissüsteem, keerukam funktsionaalsus',p4p:'Küsi pakkumist','pricing-note':'Enamik väikeettevõtteid saab hakkama ühelehelise lehega (100 € + 6 kuud hostingut tasuta) või 2–3 lehega (kuni 240 €). Peale 6 kuud jätkad Veebimajutus.ee standardhinnaga (~5 €/kuus).','how-label':'Kuidas see käib',s1t:'Kirjuta mulle',s1d:'Saada 3–4 lauset oma ärist, logo (kui on) ja kontaktinfo.',s2t:'Ehitan sinu lehe',s2d:'Ehitan lehe sinu materjali põhjal. Saad preview-lingi 1–2 päevaga.',s3t:'Kinnitad',s3d:'Vaatad üle, annad tagasiside. Teeme parandused kuni oled rahul.',s4t:'Live!',s4d:'Makse, domeen seadistatakse — leht on sinu oma.','portfolio-label':'Tehtud tööd',pt1:'Autoteenindus',pt2:'Isiklik portaal',pt3:'Reisiteenused',pt4:'IT-nõustamine',pt5:'Kunstikogu','about-label':'Minust','about-text':'1996. aastal asutasin K-Arvutisalongi — kaks inimest, üks lett Tallinnas. Kümne aastaga kasvas sellest <strong>Klick Eesti</strong>, Baltikumi suurim IT-jaekett.<br><br>Vahepeal: ERP-juurutused BCS Iteras, suured IT-projektid Eesti Raudteel. Tean, kus raha kulub põhjusega, kus ilma.<br><br><strong>Miks 100 €?</strong> Sest AI teeb musta töö kordades kiiremini. Mina pakun 30 aastat IT-arhitekti kogemust. Saad professionaalse lehe päevadega, mitte kuudega.','faq-label':'KKK',q1:'Kas 100 € on lõplik hind?',a1:'Jah. 100 € on minu tööraha ühelehelise lehe eest. Esimesed 6 kuud veebimajutust saad tasuta kaasa (koostöös Veebimajutus.ee-ga). Peale seda jätkad standardhinnaga (~5 €/kuus). Domeen tuleb sul ise osta — aitan valikuga.',q2:'Kas ma pean maksma ettemaksu?',a2:'Ei. Ehitan lehe valmis ja näitan sulle testlingi. Sa maksad alles siis, kui oled tulemusega rahul.',q3:'Kes vastutab tekstide õigsuse eest?',a3:'Ehitan struktuuri ja disaini. Tekstid vaatab klient üle enne avaldamist — sa näed preview-linki ja kinnitad enne, kui leht läheb live.',q4:'Mis siis, kui tahan hiljem midagi muuta?',a4:'Kirjutad mulle, teen muudatuse ära ja esitan arve kulunud aja eest — 40 €/h. Ei mingeid kuutasusid.',q5:'Kas saan ka mitme leheküljega saidi?',a5:'Jah. Iga lisaleht maksab 70 €. Keerukamad lahendused (e-pood, broneerimissüsteem) on eraldi hinnapakkumisega.',q6:'Mis platvormil leht ehitatakse?',a6:'Puhas HTML/CSS kood, mis töötab kõikjal. Ei mingit WordPress\u2019i, Wix\u2019i ega muud platvormi — leht on kerge, kiire ja täielikult sinu oma. Kuna leht on lihtsas koodis, pole WordPressi-stiilis pidevaid uuendusi vaja ja turvariske on tunduvalt vähem kui platvormidel, mida häkkerid massiliselt ründavad.',q7:'Kas leht on Google\u2019is leitav?',a7:'Jah. Sisestan SEO meta tagid, struktureeritud andmed ja sitemap\u2019i. Su leht on Google\u2019is indekseeritav kohe pärast avaldamist.',q8:'Mis kui mu domeeni veel pole?',a8:'Pole probleemi. Aitan domeeni registreerida (~10 €/aasta) ja server seadistada — esimesed 6 kuud hostingut on tasuta. Näitan kõik ette ära.','contact-label':'Võta ühendust','contact-wa-btn':'Kirjuta WhatsAppis','contact-wa-note':'Kõige kiirem viis ühendust saada','form-name':'Sinu nimi','form-email':'E-post','form-company':'Ettevõte (valikuline)','form-message':'Kirjelda lühidalt oma äri ja mida soovid...','form-btn':'Saada päring','form-note':'Vastan tavaliselt sama päeva jooksul.','form-privacy':'Päringut saates nõustud <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Privaatsustingimustega</a>.','cta-title':'Valmis alustama? Alates 100 €, valmis 1–2 päevaga.','cta-sub':'Kirjuta mulle 3–4 lauset oma ärist ja saame alustada. Leht on valmis 1–2 päevaga.','cta-btn':'Kirjuta mulle','footer-text':'Veiko-Peeter Kargu · Navik OÜ','cookie-text':'Sellel veebilehel kasutame küpsiseid (sh Google Analytics), et analüüsida liiklust ja pakkuda parimat kasutajakogemust.','cookie-accept':'Nõustun','cookie-decline':'Keeldun'},en:{'nav-pricing':'Pricing','nav-portfolio':'Work','nav-about':'About','nav-contact':'Contact',tag:'Websites · AI-powered · Navik OÜ',h1:'A new website <em>in 1–2 days</em> — from 100 €',sub:'🎁 + 6 months free web hosting.','price-label':'one-page website','hero-wa-btn':'Write on WhatsApp','hero-form-btn':'Send enquiry','speed-note':'Ready in 1–2 days · 6 months free hosting · Invoice only after your approval','what-label':'What you get',f1t:'Found on Google',f1d:'Your business appears in search results. Clients find you on their own, not just through word of mouth.',f2t:'Enquiries to your inbox',f2d:'A contact form on your site — clients write to you directly. Every enquiry lands in your inbox.',f3t:'The site is yours',f3d:'Published on your domain and server. No monthly fees to me, no locks — the site belongs to you.',f4t:'Ready in 1–2 days',f4d:'Send me your materials, get a preview link within days. Agencies promise weeks — I promise days.','pricing-label':'Pricing',p1n:'One-page website',p1d:'Hero + Services + About + Contact · max 5 sections',p2n:'Each additional page',p2d:'Service subpage, portfolio, gallery, etc.',p3n:'Future changes',p3d:'Text, images, minor updates',p4n:'Custom solutions',p4d:'E-commerce, booking system, complex functionality',p4p:'Request a quote','pricing-note':'Most small businesses do well with a one-page site (100 €) or 2–3 pages (up to 240 €). A custom solution is needed only for e-commerce or booking systems.','how-label':'How it works',s1t:'Write to me',s1d:'Send 3–4 sentences about your business, your logo (if available) and contact details.',s2t:'I build your site',s2d:'I build the site based on your materials. You get a preview link in 1–2 days.',s3t:'You review',s3d:'You check it over, give feedback. We refine until you are happy.',s4t:'Live!',s4d:'Payment, domain is set up — the site is yours.','portfolio-label':'Portfolio',pt1:'Auto services',pt2:'Personal portal',pt3:'Travel services',pt4:'IT consulting',pt5:'Art collection','about-label':'About me','about-text':"I've built websites for Estonian small businesses that bring clients — not just pretty pictures. Over 25 years of experience in IT and business, including building Estonia's largest IT retail chain from scratch. Today I use AI tools to create professional business websites at a fraction of the usual cost and time.",'faq-label':'FAQ',q1:'Is 100 € the final price?',a1:'Yes. 100 € is my fee for a one-page site. You only pay for your server and domain (typically 5–15 €/month), which I help you set up.',q2:'Do I need to pay upfront?',a2:'No. I build the site and share a test link. You pay only when you are happy with the result.',q3:'Who is responsible for the content?',a3:'I build the structure and design. You review the texts before publishing — you see a preview and confirm before it goes live.',q4:'What if I want changes later?',a4:'Write to me, I make the change and invoice for time spent — 40 €/h. No monthly fees.',q5:'Can I get a multi-page site?',a5:'Yes. Each additional page costs 70 €. Complex solutions (e-commerce, booking) are quoted separately.',q6:'What platform is the site built on?',a6:'Pure HTML/CSS code that works everywhere. No WordPress, Wix, or any other platform — the site is lightweight, fast, and fully yours. With clean code there are no constant platform updates needed and far fewer security risks than with platforms that hackers target en masse.',q7:'Will the site be found on Google?',a7:'Yes. I set up SEO meta tags, structured data, and a sitemap. Your site is indexable by Google right after publishing.',q8:'What if I don\u2019t have a domain yet?',a8:'No problem. I help you register a domain and set up hosting — it\u2019s included in your hosting costs (5–15 €/month).','contact-label':'Get in touch','contact-wa-btn':'Write on WhatsApp','contact-wa-note':'The fastest way to get in touch','form-name':'Your name','form-email':'Email','form-company':'Company (optional)','form-message':'Briefly describe your business and what you need...','form-btn':'Send enquiry','form-note':'I usually reply within the same day.','form-privacy':'By sending an enquiry, you agree to our <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.','cta-title':'Ready to start?','cta-sub':'Write me 3–4 sentences about your business and we can begin. Site ready in 1–2 days.','cta-btn':'Write to me','footer-text':'Veiko-Peeter Kargu · Navik OÜ','cookie-text':'We use cookies (incl. Google Analytics) on this website to analyze traffic and provide the best user experience.','cookie-accept':'Accept','cookie-decline':'Decline'},ru:{'nav-pricing':'Цены','nav-portfolio':'Работы','nav-about':'Обо мне','nav-contact':'Контакт',tag:'Веб-сайты · На основе ИИ · Navik OÜ',h1:'Новый сайт <em>за 1–2 дня</em> — от 100 €',sub:'🎁 + 6 месяцев бесплатного хостинга.','price-label':'одностраничный сайт','hero-wa-btn':'Написать в WhatsApp','hero-form-btn':'Отправить запрос','speed-note':'Готово за 1–2 дня · 6 месяцев хостинга бесплатно · Счёт только после вашего одобрения','what-label':'Что вы получаете',f1t:'Вас найдут в Google',f1d:'Ваш бизнес появится в результатах поиска. Клиенты найдут вас сами, а не только через сарафанное радио.',f2t:'Заявки прямо на почту',f2d:'Контактная форма на сайте — клиенты пишут вам напрямую. Каждая заявка приходит в ваш почтовый ящик.',f3t:'Сайт полностью ваш',f3d:'Публикуем на вашем домене и сервере. Никаких ежемесячных платежей мне, никаких замков — сайт принадлежит вам.',f4t:'Готово за 1–2 дня',f4d:'Отправляете материалы, получаете превью-ссылку за пару дней. Агентства обещают недели — я обещаю дни.','pricing-label':'Цены',p1n:'Одностраничный сайт',p1d:'Hero + Услуги + О нас + Контакты · макс. 5 секций',p2n:'Каждая доп. страница',p2d:'Страница услуги, портфолио, галерея',p3n:'Будущие изменения',p3d:'Тексты, изображения, небольшие правки',p4n:'Нестандартные решения',p4d:'Интернет-магазин, система бронирования, сложная функциональность',p4p:'Запросить расчёт','pricing-note':'Большинству малых предприятий достаточно одностраничного сайта (100 €) или 2–3 страниц (до 240 €). Нестандартное решение нужно только для интернет-магазина или системы бронирования.','how-label':'Как это работает',s1t:'Напишите мне',s1d:'Отправьте 3–4 предложения о бизнесе, логотип (если есть) и контакты.',s2t:'Создаю ваш сайт',s2d:'Создаю сайт на основе ваших материалов. Превью-ссылка за 1–2 дня.',s3t:'Вы проверяете',s3d:'Просматриваете, даёте обратную связь. Вносим правки, пока не довольны.',s4t:'Запуск!',s4d:'Оплата, настройка домена — сайт ваш.','portfolio-label':'Портфолио',pt1:'Автосервис',pt2:'Личный портал',pt3:'Туристические услуги',pt4:'IT-консалтинг',pt5:'Коллекция искусства','about-label':'Обо мне','about-text':'Я создаю сайты для малого бизнеса Эстонии, которые приводят клиентов — а не просто красивые картинки. Более 25 лет опыта в IT и бизнесе, включая создание крупнейшей IT-сети Эстонии с нуля. Сегодня я использую ИИ, чтобы создавать профессиональные бизнес-сайты за долю обычной стоимости и времени.','faq-label':'FAQ',q1:'100 € — это окончательная цена?',a1:'Да. 100 € — моя плата за одностраничный сайт. Вы оплачиваете только хостинг и домен (обычно 5–15 €/мес.).',q2:'Нужна ли предоплата?',a2:'Нет. Я создаю сайт и показываю тестовую ссылку. Вы платите только когда довольны результатом.',q3:'Кто отвечает за тексты?',a3:'Я строю структуру и дизайн. Клиент проверяет тексты перед публикацией.',q4:'Что если захочу изменения позже?',a4:'Напишите мне, сделаю правки и выставлю счёт — 40 €/ч. Никаких ежемесячных платежей.',q5:'Можно заказать многостраничный сайт?',a5:'Да. Каждая доп. страница — 70 €. Сложные решения (магазин, бронирование) — по запросу.',q6:'На какой платформе делается сайт?',a6:'Чистый HTML/CSS код, который работает везде. Никакого WordPress, Wix или другой платформы — сайт лёгкий, быстрый и полностью ваш. Чистый код не требует постоянных обновлений платформы, а рисков безопасности значительно меньше, чем у систем, которые хакеры атакуют массово.',q7:'Будет ли сайт виден в Google?',a7:'Да. Настраиваю SEO мета-теги, структурированные данные и sitemap. Сайт индексируется Google сразу после публикации.',q8:'Что если у меня ещё нет домена?',a8:'Не проблема. Помогу зарегистрировать домен и настроить хостинг — это входит в стоимость хостинга (5–15 €/мес.).','contact-label':'Связаться','contact-wa-btn':'Написать в WhatsApp','contact-wa-note':'Самый быстрый способ связаться','form-name':'Ваше имя','form-email':'Email','form-company':'Компания (необязательно)','form-message':'Кратко опишите бизнес и что вам нужно...','form-btn':'Отправить запрос','form-note':'Обычно отвечаю в тот же день.','form-privacy':'Отправляя запрос, вы соглашаетесь с нашей <a href="/privaatsuspoliitika" style="color:inherit;text-decoration:underline;">Политикой конфиденциальности</a>.','cta-title':'Готовы начать?','cta-sub':'Напишите 3–4 предложения о вашем бизнесе — и мы начнём. Сайт готов за 1–2 дня.','cta-btn':'Написать мне','footer-text':'Veiko-Peeter Kargu · Navik OÜ','cookie-text':'Мы используем файлы cookie (вкл. Google Analytics) на этом сайте для анализа трафика и предоставления лучшего пользовательского опыта.','cookie-accept':'Принимаю','cookie-decline':'Отказываюсь'}};
 
 function setLang(l){const t=T[l];document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.trim()===l.toUpperCase()));for(const[id,v]of Object.entries(t)){const el=document.getElementById(id);if(!el)continue;if(el.tagName==='INPUT'||el.tagName==='TEXTAREA')el.placeholder=v;else if(el.tagName==='BUTTON'||el.tagName==='A')el.textContent=v;else el.innerHTML=v;}const s=document.querySelector('input[name="_subject"]');if(s)s.value=l==='ru'?'Новый запрос на сайт':l==='en'?'New website enquiry':'Uus kodulehe päring';document.documentElement.lang=l;}
 
@@ -1148,7 +1188,7 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
     kw = kw.charAt(0).toUpperCase() + kw.slice(1);
     var h1El = document.getElementById('h1');
     if (h1El) {
-      h1El.innerHTML = kw + ' <em>1 päevaga</em> — alates 100€';
+      h1El.innerHTML = kw + ' <em>1–2 päevaga</em> — alates 100 €';
     }
   }
 })();
